@@ -20,7 +20,8 @@
     
     self.view.backgroundColor=[UIColor whiteColor];
     
-//    UIImageView *imageView=[UIImageView alloc]initWithFrame:CGRectMake(0, 0, <#CGFloat width#>, <#CGFloat height#>);
+    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    imageView.image=[UIImage imageNamed:@""];
     
     
     
