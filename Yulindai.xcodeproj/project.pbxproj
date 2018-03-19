@@ -59,6 +59,7 @@
 		F565ECFF205F3EE400F6ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F565ED0E205F4C5800F6ED18 /* Load */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Load; sourceTree = "<group>"; };
 		F565ED10205F4E3900F6ED18 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = "<group>"; };
+		F565ED12205F4EBD00F6ED18 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +128,7 @@
 				F565ECDA205F3EE400F6ED18 /* AppDelegate.m */,
 				F565ECDC205F3EE400F6ED18 /* ViewController.h */,
 				F565ECDD205F3EE400F6ED18 /* ViewController.m */,
+				F565ED12205F4EBD00F6ED18 /* PrefixHeader.pch */,
 				F565ECDF205F3EE400F6ED18 /* Main.storyboard */,
 				F565ECE2205F3EE400F6ED18 /* Assets.xcassets */,
 				F565ECE4205F3EE400F6ED18 /* LaunchScreen.storyboard */,
@@ -518,11 +520,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yulindai/PrefixHeader.pch";
 				INFOPLIST_FILE = Yulindai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = q.Yulindai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -532,11 +537,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yulindai/PrefixHeader.pch";
 				INFOPLIST_FILE = Yulindai/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = q.Yulindai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
