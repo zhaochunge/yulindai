@@ -16,6 +16,8 @@
 		F565ECE9205F3EE400F6ED18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECE8205F3EE400F6ED18 /* main.m */; };
 		F565ECF3205F3EE400F6ED18 /* YulindaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECF2205F3EE400F6ED18 /* YulindaiTests.m */; };
 		F565ECFE205F3EE400F6ED18 /* YulindaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */; };
+		F565ED0F205F4C5800F6ED18 /* Load in Resources */ = {isa = PBXBuildFile; fileRef = F565ED0E205F4C5800F6ED18 /* Load */; };
+		F565ED11205F4E3900F6ED18 /* Tools in Resources */ = {isa = PBXBuildFile; fileRef = F565ED10205F4E3900F6ED18 /* Tools */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		F565ECF9205F3EE400F6ED18 /* YulindaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YulindaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YulindaiUITests.m; sourceTree = "<group>"; };
 		F565ECFF205F3EE400F6ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F565ED0E205F4C5800F6ED18 /* Load */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Load; sourceTree = "<group>"; };
+		F565ED10205F4E3900F6ED18 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 		F565ECD8205F3EE400F6ED18 /* Yulindai */ = {
 			isa = PBXGroup;
 			children = (
+				F565ED10205F4E3900F6ED18 /* Tools */,
+				F565ED0E205F4C5800F6ED18 /* Load */,
 				F565ECD9205F3EE400F6ED18 /* AppDelegate.h */,
 				F565ECDA205F3EE400F6ED18 /* AppDelegate.m */,
 				F565ECDC205F3EE400F6ED18 /* ViewController.h */,
@@ -265,6 +271,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F565ED0F205F4C5800F6ED18 /* Load in Resources */,
+				F565ED11205F4E3900F6ED18 /* Tools in Resources */,
 				F565ECE6205F3EE400F6ED18 /* LaunchScreen.storyboard in Resources */,
 				F565ECE3205F3EE400F6ED18 /* Assets.xcassets in Resources */,
 				F565ECE1205F3EE400F6ED18 /* Main.storyboard in Resources */,
