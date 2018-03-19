@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */; };
 		F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDA205F3EE400F6ED18 /* AppDelegate.m */; };
 		F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDD205F3EE400F6ED18 /* ViewController.m */; };
 		F565ECE1205F3EE400F6ED18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ECDF205F3EE400F6ED18 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.release.xcconfig"; sourceTree = "<group>"; };
+		54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yulindai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C76067AEE0656EA6B8E214 /* Pods-Yulindai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.debug.xcconfig"; sourceTree = "<group>"; };
 		F565ECD6205F3EE400F6ED18 /* Yulindai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yulindai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F565ECD9205F3EE400F6ED18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F565ECDA205F3EE400F6ED18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53A663AC652375F8FAF96D62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8C76067AEE0656EA6B8E214 /* Pods-Yulindai.debug.xcconfig */,
+				075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F565ECCD205F3EE400F6ED18 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				F565ECF1205F3EE400F6ED18 /* YulindaiTests */,
 				F565ECFC205F3EE400F6ED18 /* YulindaiUITests */,
 				F565ECD7205F3EE400F6ED18 /* Products */,
+				53A663AC652375F8FAF96D62 /* Pods */,
+				FE90A3274437F73704DBA53D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +148,14 @@
 			path = YulindaiUITests;
 			sourceTree = "<group>";
 		};
+		FE90A3274437F73704DBA53D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F565ED02205F3EE400F6ED18 /* Build configuration list for PBXNativeTarget "Yulindai" */;
 			buildPhases = (
+				01F9EB653BA22CA85290CBF6 /* [CP] Check Pods Manifest.lock */,
 				F565ECD2205F3EE400F6ED18 /* Sources */,
 				F565ECD3205F3EE400F6ED18 /* Frameworks */,
 				F565ECD4205F3EE400F6ED18 /* Resources */,
+				26C36BD0B2EA77ADFD1174D1 /* [CP] Embed Pods Frameworks */,
+				C65FAE9C861B0094F6472D0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +286,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01F9EB653BA22CA85290CBF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yulindai-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26C36BD0B2EA77ADFD1174D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C65FAE9C861B0094F6472D0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F565ECD2205F3EE400F6ED18 /* Sources */ = {
@@ -428,6 +506,7 @@
 		};
 		F565ED03205F3EE400F6ED18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C76067AEE0656EA6B8E214 /* Pods-Yulindai.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -441,6 +520,7 @@
 		};
 		F565ED04205F3EE400F6ED18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
