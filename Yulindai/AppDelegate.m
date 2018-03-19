@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ForgetPwdViewController.h"
+#import "RegisterSuccessViewController.h"
+#import "ReviewPwdSuccessVC.h"
+#import "ReviewPwdViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    ReviewPwdViewController *vc = [ReviewPwdViewController new];
+    self.window.rootViewController =vc;
     
     
     
