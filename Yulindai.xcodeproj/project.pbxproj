@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */; };
+		F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */; };
+		F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665D1205F65D800B3B3BB /* ReviewPwdViewController.m */; };
+		F50665D7205F663A00B3B3BB /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665D6205F663A00B3B3BB /* UIColor+ColorChange.m */; };
+		F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665D9205F880F00B3B3BB /* RegisterSuccessViewController.m */; };
+		F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */; };
+		F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */; };
 		F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDA205F3EE400F6ED18 /* AppDelegate.m */; };
 		F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDD205F3EE400F6ED18 /* ViewController.m */; };
 		F565ECE1205F3EE400F6ED18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ECDF205F3EE400F6ED18 /* Main.storyboard */; };
@@ -16,7 +22,6 @@
 		F565ECE9205F3EE400F6ED18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECE8205F3EE400F6ED18 /* main.m */; };
 		F565ECF3205F3EE400F6ED18 /* YulindaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECF2205F3EE400F6ED18 /* YulindaiTests.m */; };
 		F565ECFE205F3EE400F6ED18 /* YulindaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */; };
-		F565ED11205F4E3900F6ED18 /* Tools in Resources */ = {isa = PBXBuildFile; fileRef = F565ED10205F4E3900F6ED18 /* Tools */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,18 @@
 		075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.release.xcconfig"; sourceTree = "<group>"; };
 		54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yulindai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C76067AEE0656EA6B8E214 /* Pods-Yulindai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.debug.xcconfig"; sourceTree = "<group>"; };
+		F50665CE205F65D800B3B3BB /* ReviewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewPwdViewController.h; sourceTree = "<group>"; };
+		F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
+		F50665D0205F65D800B3B3BB /* ForgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
+		F50665D1205F65D800B3B3BB /* ReviewPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewPwdViewController.m; sourceTree = "<group>"; };
+		F50665D5205F663A00B3B3BB /* UIColor+ColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
+		F50665D6205F663A00B3B3BB /* UIColor+ColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
+		F50665D8205F880F00B3B3BB /* RegisterSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterSuccessViewController.h; sourceTree = "<group>"; };
+		F50665D9205F880F00B3B3BB /* RegisterSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterSuccessViewController.m; sourceTree = "<group>"; };
+		F50665DC205F8D9600B3B3BB /* MyBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBaseViewController.h; sourceTree = "<group>"; };
+		F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBaseViewController.m; sourceTree = "<group>"; };
+		F50665E2205F94B200B3B3BB /* ReviewPwdSuccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewPwdSuccessVC.h; sourceTree = "<group>"; };
+		F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewPwdSuccessVC.m; sourceTree = "<group>"; };
 		F565ECD6205F3EE400F6ED18 /* Yulindai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yulindai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F565ECD9205F3EE400F6ED18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F565ECDA205F3EE400F6ED18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,7 +73,6 @@
 		F565ECF9205F3EE400F6ED18 /* YulindaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YulindaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YulindaiUITests.m; sourceTree = "<group>"; };
 		F565ECFF205F3EE400F6ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F565ED10205F4E3900F6ED18 /* Tools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tools; sourceTree = "<group>"; };
 		F565ED12205F4EBD00F6ED18 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +111,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F50665CB205F645800B3B3BB /* Loads */ = {
+			isa = PBXGroup;
+			children = (
+				F50665D0205F65D800B3B3BB /* ForgetPwdViewController.h */,
+				F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */,
+				F50665CE205F65D800B3B3BB /* ReviewPwdViewController.h */,
+				F50665D1205F65D800B3B3BB /* ReviewPwdViewController.m */,
+				F50665D8205F880F00B3B3BB /* RegisterSuccessViewController.h */,
+				F50665D9205F880F00B3B3BB /* RegisterSuccessViewController.m */,
+				F50665E2205F94B200B3B3BB /* ReviewPwdSuccessVC.h */,
+				F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */,
+			);
+			path = Loads;
+			sourceTree = "<group>";
+		};
+		F50665D4205F660800B3B3BB /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F50665D5205F663A00B3B3BB /* UIColor+ColorChange.h */,
+				F50665D6205F663A00B3B3BB /* UIColor+ColorChange.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F50665DB205F8D6900B3B3BB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F50665DC205F8D9600B3B3BB /* MyBaseViewController.h */,
+				F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		F565ECCD205F3EE400F6ED18 = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +169,9 @@
 		F565ECD8205F3EE400F6ED18 /* Yulindai */ = {
 			isa = PBXGroup;
 			children = (
-				F565ED10205F4E3900F6ED18 /* Tools */,
+				F50665DB205F8D6900B3B3BB /* Base */,
+				F50665D4205F660800B3B3BB /* Tools */,
+				F50665CB205F645800B3B3BB /* Loads */,
 				F565ECD9205F3EE400F6ED18 /* AppDelegate.h */,
 				F565ECDA205F3EE400F6ED18 /* AppDelegate.m */,
 				F565ECDC205F3EE400F6ED18 /* ViewController.h */,
@@ -270,7 +321,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F565ED11205F4E3900F6ED18 /* Tools in Resources */,
 				F565ECE6205F3EE400F6ED18 /* LaunchScreen.storyboard in Resources */,
 				F565ECE3205F3EE400F6ED18 /* Assets.xcassets in Resources */,
 				F565ECE1205F3EE400F6ED18 /* Main.storyboard in Resources */,
@@ -349,7 +399,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
+				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
+				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
+				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
 				F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */,
+				F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */,
+				F50665D7205F663A00B3B3BB /* UIColor+ColorChange.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 			);
