@@ -49,7 +49,7 @@
     UIButton *loadBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.view addSubview:loadBtn];
     [loadBtn setBackgroundColor:NAVCOLOR];
-    loadBtn.layer.cornerRadius = 25;
+    loadBtn.layer.cornerRadius = 40;
     loadBtn.layer.borderWidth = 1;
     loadBtn.layer.borderColor = NAVCOLOR.CGColor;
     [loadBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
@@ -58,7 +58,7 @@
     [loadBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(@30);
         make.right.mas_offset(@-30);
-        make.height.mas_equalTo(@50);
+        make.height.mas_equalTo(@40);
         make.top.mas_equalTo(titleLab.mas_bottom).mas_offset(@50);
     }];
 }
