@@ -65,7 +65,7 @@
     [_codeField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_phoneField.mas_left);
         make.height.mas_equalTo(@30);
-        make.top.mas_equalTo(line1.mas_bottom).mas_offset(@30);
+        make.top.mas_equalTo(line1.mas_bottom).mas_offset(@20);
         make.right.mas_offset(@-130);
         
     }];
@@ -75,7 +75,7 @@
     [_codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(@-30);
         make.width.mas_equalTo(@100);
-    make.top.mas_equalTo(line1.mas_bottom).mas_offset(@30);
+    make.top.mas_equalTo(line1.mas_bottom).mas_offset(@20);
         make.height.mas_equalTo(@30);
     }];
     [_codeBtn setTitleColor:NAVCOLOR forState:(UIControlStateNormal)];
@@ -94,14 +94,14 @@
     [ self.sureBtn setTitle:@"下一步" forState:UIControlStateNormal];
     [self.view addSubview:_sureBtn];
     self.sureBtn.layer.masksToBounds = YES;
-    self.sureBtn.layer.cornerRadius = 25;
+    self.sureBtn.layer.cornerRadius = 20;
     self.sureBtn.layer.borderWidth = 1;
     self.sureBtn.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [_sureBtn setTitleColor:[UIColor lightGrayColor] forState:(UIControlStateNormal)];
     [_sureBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(@30);
-        make.top.mas_equalTo(line2.mas_bottom).mas_offset(@50);
-        make.height.mas_equalTo(@50);
+        make.top.mas_equalTo(line2.mas_bottom).mas_offset(@40);
+        make.height.mas_equalTo(@40);
         make.right.mas_equalTo(@-30);
     }];
     [self.sureBtn addTarget:self action:@selector(makeSure:) forControlEvents:UIControlEventTouchUpInside];
