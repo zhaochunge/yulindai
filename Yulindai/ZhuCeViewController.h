@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MyBaseViewController.h"
 
-@interface ZhuCeViewController : UIViewController
+@interface ZhuCeViewController : MyBaseViewController
 
 @end

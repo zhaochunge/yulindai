@@ -7,6 +7,7 @@
 //
 
 #import "RegisterSuccessViewController.h"
+#import "ViewController.h"
 
 @interface RegisterSuccessViewController ()
 
@@ -31,7 +32,7 @@
         make.height.mas_equalTo(@80);
         make.top.mas_offset(@114);
     }];
-    image.backgroundColor = NAVCOLOR;
+//    image.backgroundColor = NAVCOLOR;
     image.layer.masksToBounds = YES;
     image.layer.cornerRadius = 40;
     UILabel *titleLab = [UILabel new];
@@ -63,7 +64,10 @@
 }
 #pragma mark 立即登录呢
 -(void)Load:(UIButton *)btn{
-    
+    ViewController *vc = [ViewController new];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

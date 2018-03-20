@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ZhuCeViewController.h"
+#import "ForgetPwdViewController.h"
 
 @interface ViewController ()<UITextFieldDelegate>
 
@@ -39,7 +40,10 @@
  *忘记密码
  */
 -(void)fpwdBtnClick:(UIButton *)button{
-    
+    ForgetPwdViewController *vc = [ForgetPwdViewController new];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
     
     
 }
@@ -49,8 +53,8 @@
 -(void)zhuceBtnClick:(UIButton *)button{
     NSLog(@"注册");
     ZhuCeViewController *zhuceVC=[[ZhuCeViewController alloc]init];
-    UINavigationController *zhuceNav=[[UINavigationController alloc]initWithRootViewController:zhuceVC];
-    [self presentViewController:zhuceNav animated:YES completion:nil];
+//    UINavigationController *zhuceNav=[[UINavigationController alloc]initWithRootViewController:zhuceVC];
+    [self presentViewController:zhuceVC animated:YES completion:nil];
     
 }
 
@@ -68,13 +72,13 @@
     [self.view addSubview:_pwdTF];
     
     UIButton *loginBtn=[self btnWithFrame:CGRectMake(40, _pwdTF.frame.origin.y+60, WIDTH-80, 40) title:@"登录" color:@"" size:19];
-    loginBtn.backgroundColor=[UIColor cyanColor];
-    [loginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    loginBtn.backgroundColor=[UIColor colorWithHexString:@"#39a1ea"];
+    [loginBtn setTitleColor:[UIColor colorWithHexString:@"#ffffff"] forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:loginBtn];
     
     UIButton *fpwdBtn=[self btnWithFrame:CGRectMake(WIDTH/2.0-80, loginBtn.frame.origin.y+50, 160, 30) title:@"忘记密码?" color:@"" size:15];
-    [fpwdBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [fpwdBtn setTitleColor:NAVCOLOR forState:UIControlStateNormal];
     [fpwdBtn addTarget:self action:@selector(fpwdBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:fpwdBtn];
     
