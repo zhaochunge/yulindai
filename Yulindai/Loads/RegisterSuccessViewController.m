@@ -30,7 +30,7 @@
         make.centerX.mas_offset(0);
         make.width.mas_equalTo(@80);
         make.height.mas_equalTo(@80);
-        make.top.mas_offset(@114);
+        make.top.mas_offset(SafeAreaTopHeight+30);
     }];
 //    image.backgroundColor = NAVCOLOR;
     image.layer.masksToBounds = YES;
@@ -49,7 +49,7 @@
     UIButton *loadBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [self.view addSubview:loadBtn];
     [loadBtn setBackgroundColor:NAVCOLOR];
-    loadBtn.layer.cornerRadius = 40;
+    loadBtn.layer.cornerRadius = 20;
     loadBtn.layer.borderWidth = 1;
     loadBtn.layer.borderColor = NAVCOLOR.CGColor;
     [loadBtn setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];

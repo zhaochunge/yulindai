@@ -29,7 +29,7 @@
         make.centerX.mas_offset(0);
         make.width.mas_equalTo(@80);
         make.height.mas_equalTo(@80);
-        make.top.mas_offset(@114);
+        make.top.mas_offset(SafeAreaTopHeight+30);
     }];
 //    image.backgroundColor = NAVCOLOR;
     image.layer.masksToBounds = YES;

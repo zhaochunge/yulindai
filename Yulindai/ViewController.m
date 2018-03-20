@@ -86,7 +86,7 @@
     line.backgroundColor=[UIColor lightGrayColor];
     [self.view addSubview:line];
     
-    UIButton *zhuceBtn=[self btnWithFrame:CGRectMake(WIDTH/2.0-100, HEIGHT-45, 200, 30) title:@"没有账号?立即注册" color:@"" size:16];
+    UIButton *zhuceBtn=[self btnWithFrame:CGRectMake(WIDTH/2.0-100, HEIGHT-45-SafeAreaBottomHeight, 200, 30) title:@"没有账号?立即注册" color:@"" size:16];
     [zhuceBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [zhuceBtn addTarget:self action:@selector(zhuceBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:zhuceBtn];

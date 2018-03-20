@@ -43,7 +43,7 @@
     [_phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(@30);
         make.height.mas_equalTo(@30);
-        make.top.mas_equalTo(@100);
+        make.top.mas_equalTo(SafeAreaTopHeight+30);
         make.right.mas_offset(@-30);
         
     }];
