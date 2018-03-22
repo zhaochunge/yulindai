@@ -39,6 +39,7 @@
                                         }];
     _phoneField.attributedPlaceholder = attrString;
     _phoneField.textColor = NAVCOLOR;
+    _phoneField.keyboardType = UIKeyboardTypeNumberPad;
     _phoneField.delegate = self;
     [_phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(@30);
@@ -66,7 +67,7 @@
         make.left.mas_equalTo(_phoneField.mas_left);
         make.height.mas_equalTo(@30);
         make.top.mas_equalTo(line1.mas_bottom).mas_offset(@20);
-        make.right.mas_offset(@-130);
+        make.right.mas_offset(@-180);
         
     }];
     self.codeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -74,7 +75,7 @@
     [self.view addSubview:_codeBtn];
     [_codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(@-30);
-        make.width.mas_equalTo(@100);
+        make.width.mas_equalTo(@150);
     make.top.mas_equalTo(line1.mas_bottom).mas_offset(@20);
         make.height.mas_equalTo(@30);
     }];
@@ -127,10 +128,21 @@
     
     return YES;
 }
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [_phoneField resignFirstResponder];
+    [_codeField resignFirstResponder];
+}
 #pragma mark 获取验证码
 -(void)CodeAction:(UIButton *)btn{
-    [self getData];
-    [self openCountdown];
+    if(self.phoneField.text.length>0){
+       [self getData];
+    }else{
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"请先输入手机号" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alert show];
+        [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
+    }
+    
+//
 }
 // 开启倒计时效果
 -(void)openCountdown{
@@ -174,22 +186,44 @@
 #pragma mark 下一步
 -(void)makeSure:(UIButton *)btn{
     ReviewPwdViewController *vc = [ReviewPwdViewController new];
+    vc.codeStr = self.codeField.text;
+    vc.phoneStr = self.phoneField.text;
     [self presentModalViewController:vc animated:YES]; 
 }
 
 -(void)getData{
-    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
-    NSString *url = [NSString stringWithFormat:@"%@act=send_reset_pwd_code",BASE_URL];
-    // 需要设置 body 体
-    NSDictionary *dic = @{@"mobile" : self.phoneField.text};
-    [sessionManager POST:url parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-        NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-    }];
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleShrink];
+    [MMProgressHUD showWithTitle:nil status:@"正在发送验证码"];
 
+    NSString *url = [NSString stringWithFormat:@"%@act=send_reset_pwd_code",BASE_URL];
+    NSString *base64String=[Base64Verb JiaMiBase64:self.phoneField.text];
+    NSDictionary *dic = @{@"mobile" : base64String};
     
-    
+    [NetTools post:url parameters:dic
+           success:^(id responseObject) {
+               NSDictionary *dic = [Base64Verb JieMiBase64:responseObject];
+               if ([dic[@"response_code"] isEqualToString:@"1"]) {
+//                   UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"验证码已发送" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+//                   [alert show];
+//                   [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
+                   [MMProgressHUD dismissWithSuccess:@"验证码已发送"];
+                   [self openCountdown];
+               }else{
+//                   UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"验证码发送失败" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+//                   [alert show];
+//                   [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
+                   [MMProgressHUD dismissWithError:@"验证码发送失败"];
+               }
+           } failure:^(NSError *error) {
+               NSLog(@"失败");
+           }];
+
+}
+#pragma mark 定时
+- (void)dismissAlert:(UIAlertView*)alert {
+    if ( alert.visible ) {
+        [alert dismissWithClickedButtonIndex:alert.cancelButtonIndex animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

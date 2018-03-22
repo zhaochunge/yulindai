@@ -26,6 +26,8 @@
 		F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */; };
 		F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */; };
 		F50665E8205F9E5100B3B3BB /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665E7205F9E5100B3B3BB /* UIColor+ColorChange.m */; };
+		F54AB486206353E80019391D /* Base64Verb.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB485206353E80019391D /* Base64Verb.m */; };
+		F54AB489206381370019391D /* NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB488206381370019391D /* NetTools.m */; };
 		F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDA205F3EE400F6ED18 /* AppDelegate.m */; };
 		F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDD205F3EE400F6ED18 /* ViewController.m */; };
 		F565ECE1205F3EE400F6ED18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ECDF205F3EE400F6ED18 /* Main.storyboard */; };
@@ -95,6 +97,10 @@
 		F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewPwdSuccessVC.m; sourceTree = "<group>"; };
 		F50665E6205F9E5100B3B3BB /* UIColor+ColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
 		F50665E7205F9E5100B3B3BB /* UIColor+ColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
+		F54AB484206353E80019391D /* Base64Verb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Verb.h; sourceTree = "<group>"; };
+		F54AB485206353E80019391D /* Base64Verb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64Verb.m; sourceTree = "<group>"; };
+		F54AB487206381370019391D /* NetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetTools.h; sourceTree = "<group>"; };
+		F54AB488206381370019391D /* NetTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetTools.m; sourceTree = "<group>"; };
 		F565ECD6205F3EE400F6ED18 /* Yulindai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yulindai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F565ECD9205F3EE400F6ED18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F565ECDA205F3EE400F6ED18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -216,6 +222,10 @@
 			children = (
 				F50665E6205F9E5100B3B3BB /* UIColor+ColorChange.h */,
 				F50665E7205F9E5100B3B3BB /* UIColor+ColorChange.m */,
+				F54AB484206353E80019391D /* Base64Verb.h */,
+				F54AB485206353E80019391D /* Base64Verb.m */,
+				F54AB487206381370019391D /* NetTools.h */,
+				F54AB488206381370019391D /* NetTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -492,7 +502,11 @@
 				1859449B20638CC8002EF381 /* MMProgressHUD+Animations.m in Sources */,
 				1859449F20638CC8002EF381 /* MMProgressHUDViewController.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
+<<<<<<< HEAD
 				1859449D20638CC8002EF381 /* MMProgressHUD.m in Sources */,
+=======
+				F54AB489206381370019391D /* NetTools.m in Sources */,
+>>>>>>> a922110871b1e28dba26d4447dae3983280f374b
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				185944A220638CC8002EF381 /* MMVectorImage.m in Sources */,
 				1859449920638CC8002EF381 /* MMHud.m in Sources */,
@@ -500,6 +514,7 @@
 				1859449A20638CC8002EF381 /* MMLinearProgressView.m in Sources */,
 				1859449E20638CC8002EF381 /* MMProgressHUDOverlayView.m in Sources */,
 				1862CF8C205F8739002EE70C /* ZhuCeViewController.m in Sources */,
+				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
