@@ -219,12 +219,12 @@
            }];
 
 }
-#pragma mark 定时
-- (void)dismissAlert:(UIAlertView*)alert {
-    if ( alert.visible ) {
-        [alert dismissWithClickedButtonIndex:alert.cancelButtonIndex animated:YES];
-    }
-}
+//#pragma mark 定时
+//- (void)dismissAlert:(UIAlertView*)alert {
+//    if ( alert.visible ) {
+//        [alert dismissWithClickedButtonIndex:alert.cancelButtonIndex animated:YES];
+//    }
+//}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

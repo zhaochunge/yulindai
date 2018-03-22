@@ -502,11 +502,8 @@
 				1859449B20638CC8002EF381 /* MMProgressHUD+Animations.m in Sources */,
 				1859449F20638CC8002EF381 /* MMProgressHUDViewController.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
-<<<<<<< HEAD
 				1859449D20638CC8002EF381 /* MMProgressHUD.m in Sources */,
-=======
 				F54AB489206381370019391D /* NetTools.m in Sources */,
->>>>>>> a922110871b1e28dba26d4447dae3983280f374b
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				185944A220638CC8002EF381 /* MMVectorImage.m in Sources */,
 				1859449920638CC8002EF381 /* MMHud.m in Sources */,
