@@ -9,13 +9,15 @@
 #import "ZhuCeViewController.h"
 #import "RegisterSuccessViewController.h"
 
-@interface ZhuCeViewController ()
+@interface ZhuCeViewController ()<UITextFieldDelegate>
 
 @property(nonatomic,strong)UITextField *accountTF;
-@property(nonatomic,strong)UITextField *telephoneTF;
+@property(nonatomic,strong)UITextField *mobileTF;
 @property(nonatomic,strong)UITextField *verCodeTF;
 @property(nonatomic,strong)UITextField *pwdTF;
 @property(nonatomic,strong)UITextField *rePwdTF;
+@property(nonatomic,strong)UIButton *verBtn;
+@property(nonatomic,strong)UIView *miniView;
 
 @end
 
@@ -27,14 +29,6 @@
     self.view.backgroundColor=[UIColor whiteColor];
 
     self.navLab.text = @"手机注册";
-//    self.title=@"手机注册";
-//    UIButton *backBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    backBtn.frame=CGRectMake(0, 0, 40, 40);
-////    backBtn.backgroundColor=[UIColor blueColor];
-//    [backBtn setTitle:@"<" forState:UIControlStateNormal];
-//    [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithCustomView:backBtn];
-//    self.navigationItem.leftBarButtonItem=leftItem;
     [self setBackBtn];
     [self createUI];
 
@@ -48,18 +42,23 @@
                                         }];
     _accountTF.attributedPlaceholder = attrString;
     _accountTF.textColor = NAVCOLOR;
+//    _accountTF.delegate=self;
     [self.view addSubview:_accountTF];
-    _telephoneTF=[self setTFWithFrame:CGRectMake(40, _accountTF.frame.origin.y+50, WIDTH-80, 40) placeholder:@"  请输入手机号"];
-    [self.view addSubview:_telephoneTF];
-    _verCodeTF=[self setTFWithFrame:CGRectMake(40, _telephoneTF.frame.origin.y+50, WIDTH-200, 40) placeholder:@"  请输入验证码"];
+    _mobileTF=[self setTFWithFrame:CGRectMake(40, _accountTF.frame.origin.y+50, WIDTH-80, 40) placeholder:@"  请输入手机号"];
+    _mobileTF.delegate=self;
+    [self.view addSubview:_mobileTF];
+    _verCodeTF=[self setTFWithFrame:CGRectMake(40, _mobileTF.frame.origin.y+50, WIDTH-200, 40) placeholder:@"  请输入验证码"];
+    _verCodeTF.delegate=self;
     [self.view addSubview:_verCodeTF];
     _pwdTF=[self setTFWithFrame:CGRectMake(40, _verCodeTF.frame.origin.y+50, WIDTH-80, 40) placeholder:@"  请输入登录密码"];
+    _pwdTF.delegate=self;
     [self.view addSubview:_pwdTF];
     _rePwdTF=[self setTFWithFrame:CGRectMake(40, _pwdTF.frame.origin.y+50, WIDTH-80, 40) placeholder:@"  请确认登录密码"];
+    _rePwdTF.delegate=self;
     [self.view addSubview:_rePwdTF];
     
-    UIButton *verBtn=[self btnWithFrame:CGRectMake(WIDTH-150, _verCodeTF.frame.origin.y+10, 110, 20) title:@"获取验证码" color:NAVCOLOR image:@"" size:14 action:@selector(verBtnClick:)];
-    [self.view addSubview:verBtn];
+    _verBtn=[self btnWithFrame:CGRectMake(WIDTH-150, _verCodeTF.frame.origin.y+10, 110, 20) title:@"获取验证码" color:NAVCOLOR image:@"" size:14 action:@selector(verBtnClick:)];
+    [self.view addSubview:_verBtn];
     
     UIButton *checkBtn=[self btnWithFrame:CGRectMake(40, _rePwdTF.frame.origin.y+80, 20, 20) title:@"" color:nil image:@"选中" size:1 action:nil];
     [self.view addSubview:checkBtn];
@@ -81,14 +80,127 @@
 }
 
 -(void)nextBtnClick{
-    RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
-    [self presentViewController:vc animated:YES completion:^{
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
+    [MMProgressHUD showDeterminateProgressWithTitle:nil status:nil];
+    NSString *url=[NSString stringWithFormat:@"%@%@",BASE_URL,@"act=register"];
+    NSLog(@"URL:%@",url);
+    NSURLSession *session=[NSURLSession sharedSession];
+    NSURL *url2=[NSURL URLWithString:url];
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url2];
+    request.HTTPMethod=@"POST";
+    request.HTTPBody=[[NSString stringWithFormat:@"user_name=%@&user_pwd=%@&user_pwd_confirm=%@&mobile=%@&mobile_code=%@&type=JSON",[NSString stringWithFormat:@"%@",_accountTF.text],[NSString stringWithFormat:@"%@",_pwdTF.text],[NSString stringWithFormat:@"%@",_rePwdTF.text],[NSString stringWithFormat:@"%@",_mobileTF.text],[NSString stringWithFormat:@"%@",_verCodeTF.text]] dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLSessionDataTask *dataTask=[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSData *data64=[GTMBase64 decodeData:data];
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data64 options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"dict:%@",dict);
+        
+        if ([dict[@"response_code"] intValue]==1) {
+            [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
+            RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
+            [self presentViewController:vc animated:YES completion:^{
+
+            }];
+        }else{
+            [MMProgressHUD dismissWithError:dict[@"show_err"]];
+        }
         
     }];
+    [dataTask resume];
+    
 }
 
+#pragma mark 获取验证码
 -(void)verBtnClick:(UIButton *)button{
     NSLog(@"获取验证码");
+    [self getData];
+    [self openCountdown];
+}
+-(void)getData{
+    
+    NSString *url=[NSString stringWithFormat:@"%@%@",BASE_URL,@"act=send_register_code"];
+    
+    NSURLSession *session=[NSURLSession sharedSession];
+    NSURL *url2=[NSURL URLWithString:url];
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url2];
+    request.HTTPMethod=@"POST";
+    request.HTTPBody=[[NSString stringWithFormat:@"mobile=%@&type=JSON",[NSString stringWithFormat:@"%@",@"13074116296"]] dataUsingEncoding:NSUTF8StringEncoding];//_verCodeTF.text
+    
+    NSURLSessionDataTask *dataTask=[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSData *data64=[GTMBase64 decodeData:data];
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data64 options:NSJSONReadingMutableContainers error:nil];
+
+        dispatch_sync(dispatch_get_main_queue(), ^(){
+           
+            [self createminiViewWithTitle:dict[@"show_err"]];
+            
+            [UIView animateWithDuration:2 animations:^{
+                _miniView.alpha = 0.5;
+            } completion:^(BOOL finished) {
+                [_miniView removeFromSuperview];
+            }];
+            
+        });
+        
+    }];
+    [dataTask resume];
+    
+}
+
+-(void)createminiViewWithTitle:(NSString *)title{
+    
+    _miniView=[[UIView alloc]initWithFrame:CGRectMake((WIDTH/2.0-75), 150, 150, 30)];
+    _miniView.backgroundColor=[UIColor blackColor];
+    _miniView.layer.cornerRadius=5;
+    [self.view addSubview:_miniView];
+    
+    UILabel *label=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 30)];
+    label.text=title;
+    label.textColor=[UIColor whiteColor];
+    label.font=[UIFont systemFontOfSize:13];
+    label.textAlignment=NSTextAlignmentCenter;
+    [_miniView addSubview:label];
+}
+
+// 开启倒计时效果
+-(void)openCountdown{
+    
+    __block NSInteger time = 59; //倒计时时间
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    
+    dispatch_source_set_event_handler(_timer, ^{
+        
+        if(time <= 0){ //倒计时结束，关闭
+            
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //设置按钮的样式
+                [_verBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+                [_verBtn setTitleColor:NAVCOLOR forState:UIControlStateNormal];
+                _verBtn.userInteractionEnabled = YES;
+            });
+            
+        }else{
+            
+            int seconds = time % 60;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                //设置按钮显示读秒效果
+                [_verBtn setTitle:[NSString stringWithFormat:@"重新发送(%.2d)", seconds] forState:UIControlStateNormal];
+                [_verBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+                _verBtn.userInteractionEnabled = NO;
+            });
+            time--;
+        }
+    });
+    dispatch_resume(_timer);
 }
 
 -(UIButton *)btnWithFrame:(CGRect)frame title:(NSString *)title color:(UIColor*)color image:(NSString *)image size:(CGFloat)size action:(SEL)action{
@@ -120,6 +232,29 @@
     UILabel *line=[[UILabel alloc]initWithFrame:CGRectMake(40, tf.frame.origin.y+37, WIDTH-80, 1)];
     line.backgroundColor=[UIColor lightGrayColor];
     [self.view addSubview:line];
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [UIView beginAnimations:@"Animation" context:nil];
+    [UIView setAnimationDuration:0.20];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y - 100, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [UIView beginAnimations:@"Animation" context:nil];
+    [UIView setAnimationDuration:0.20];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+//    self.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y + 100, self.view.frame.size.width, self.view.frame.size.height);
+    [UIView commitAnimations];
 }
 
 -(void)backClick{

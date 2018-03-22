@@ -33,9 +33,36 @@
  */
 -(void)loginBtnClick:(UIButton *)button{
     
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
+    [MMProgressHUD showDeterminateProgressWithTitle:nil status:@"登录中..."];
     
+    NSString *url=@"https://fuiou.yulindai.com/mapi/index.php?act=login";
     
+    NSURLSession *session=[NSURLSession sharedSession];
+    NSURL *url2=[NSURL URLWithString:url];
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url2];
+    request.HTTPMethod=@"POST";
+    request.HTTPBody=[[NSString stringWithFormat:@"email=%@&pwd=%@&type=JSON",[NSString stringWithFormat:@"%@",_accountTF.text],[NSString stringWithFormat:@"%@",_pwdTF.text]] dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLSessionDataTask *dataTask=[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSData *data64=[GTMBase64 decodeData:data];
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data64 options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"dict:%@",dict);
+        
+        if ([dict[@"response_code"] intValue]==1) {
+            
+            [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
+            
+        }else{
+            [MMProgressHUD dismissWithError:dict[@"show_err"]];
+        }
+
+    }];
+    [dataTask resume];
+   
 }
+
 /**
  *忘记密码
  */
@@ -44,7 +71,6 @@
     [self presentViewController:vc animated:YES completion:^{
         
     }];
-    
     
 }
 /**
