@@ -28,7 +28,7 @@
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(@0);
         make.right.mas_offset(@0);
-        make.height.mas_equalTo(@64);
+        make.height.mas_equalTo(@SafeAreaTopHeight);
         make.top.mas_offset(@0);
     }];
     self.navLab = [UILabel new];
@@ -38,7 +38,7 @@
     [self.navLab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(@70);
         make.right.mas_offset(@-70);
-        make.top.mas_offset(@20);
+        make.top.mas_offset(@(SafeAreaTopHeight-44));
         make.height.mas_equalTo(@44);
     }];
 }
@@ -49,7 +49,7 @@
 //    btn.backgroundColor = [UIColor whiteColor];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_offset(@25);
-        make.top.mas_offset(@30);
+        make.top.mas_offset(@(SafeAreaTopHeight-35));
         make.width.mas_equalTo(@27);
         make.height.mas_equalTo(@25);
     }];

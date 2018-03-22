@@ -15,7 +15,11 @@
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 #define HEIGHT [UIScreen mainScreen].bounds.size.height
 #define NAVCOLOR [UIColor colorWithHexString:@"#39a1ea"]
+#define SafeAreaBottomHeight (HEIGHT == 812.0 ? 34 : 0)
+#define SafeAreaTopHeight (HEIGHT == 812.0 ? 88 : 64)
 
+
+#define BASE_URL @"https://fuiou.yulindai.com/mapi/index.php?"
 
 #import "GTMBase64.h"
 //#import "UIColor+ColorChange.h"

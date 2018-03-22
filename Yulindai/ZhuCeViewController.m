@@ -41,7 +41,7 @@
 }
 
 -(void)createUI{
-    _accountTF=[self setTFWithFrame:CGRectMake(40, 80, WIDTH-80, 40) placeholder:@"  请输入用户名"];
+    _accountTF=[self setTFWithFrame:CGRectMake(40, SafeAreaTopHeight+20, WIDTH-80, 40) placeholder:@"  请输入用户名"];
     NSAttributedString *attrString = [[NSAttributedString alloc] initWithString:@"  请输入用户名" attributes:
                                       @{NSForegroundColorAttributeName:NAVCOLOR,
                                         NSFontAttributeName:_accountTF.font

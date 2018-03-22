@@ -43,7 +43,7 @@
     [_phoneField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(@30);
         make.height.mas_equalTo(@30);
-        make.top.mas_equalTo(@100);
+        make.top.mas_equalTo(SafeAreaTopHeight+30);
         make.right.mas_offset(@-30);
         
     }];
@@ -56,7 +56,7 @@
         make.right.mas_offset(@-30);
         make.top.mas_equalTo(_phoneField.mas_bottom).mas_offset(@10);
     }];
-    
+    //
     self.codeField = [UITextField new];
     [self.view addSubview:_codeField];
     _codeField.placeholder = @"请输入验证码";
@@ -90,6 +90,7 @@
         make.right.mas_offset(@-30);
         make.top.mas_equalTo(_codeField.mas_bottom).mas_offset(@10);
     }];
+    //下一步提交button
     self.sureBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     [ self.sureBtn setTitle:@"下一步" forState:UIControlStateNormal];
     [self.view addSubview:_sureBtn];
@@ -128,6 +129,7 @@
 }
 #pragma mark 获取验证码
 -(void)CodeAction:(UIButton *)btn{
+    [self getData];
     [self openCountdown];
 }
 // 开启倒计时效果
@@ -175,6 +177,20 @@
     [self presentModalViewController:vc animated:YES]; 
 }
 
+-(void)getData{
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    NSString *url = [NSString stringWithFormat:@"%@act=send_reset_pwd_code",BASE_URL];
+    // 需要设置 body 体
+    NSDictionary *dic = @{@"mobile" : self.phoneField.text};
+    [sessionManager POST:url parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
