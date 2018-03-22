@@ -22,9 +22,6 @@
     // Override point for customization after application launch.
 
     
-    ReviewPwdViewController *vc = [ReviewPwdViewController new];
-    self.window.rootViewController =vc;
-
 //    ReviewPwdViewController *vc = [ReviewPwdViewController new];
 //    self.window.rootViewController =vc;
 

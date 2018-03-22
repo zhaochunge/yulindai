@@ -33,8 +33,31 @@
  */
 -(void)loginBtnClick:(UIButton *)button{
     
+    NSString *url=@"https://fuiou.yulindai.com/mapi/index.php?";
     
+    NSDictionary *params=@{
+                           @"email":[NSString stringWithFormat:@"%@",@"david"],//_accountTF.text
+                           @"pwd":[NSString stringWithFormat:@"%@",@"wei199345"],//_pwdTF.text
+                           @"act":@"login"
+                           };
+    NSLog(@"注册页params:%@",params);
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager POST:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        
+        NSLog(@"注册页:%@",responseObject);
+        
+        NSData *data64=[GTMBase64 decodeData:responseObject];
+        NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data64 options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"dict:%@",dict);
+        
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"error:%@",error);
+        
+    }];
+   
 }
 /**
  *忘记密码
@@ -44,7 +67,6 @@
     [self presentViewController:vc animated:YES completion:^{
         
     }];
-    
     
 }
 /**
