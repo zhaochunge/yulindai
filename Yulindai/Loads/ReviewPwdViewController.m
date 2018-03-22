@@ -60,7 +60,7 @@
         make.left.mas_equalTo(titleLab.mas_left);
         make.height.mas_equalTo(@1);
         make.right.mas_offset(@-30);
-    make.top.mas_equalTo(_PwdField.mas_bottom).mas_offset(@20);
+    make.top.mas_equalTo(_PwdField.mas_bottom).mas_offset(@10);
     }];
     
     self.PwdAgain = [UITextField new];
@@ -105,6 +105,7 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (textField == _PwdField) {
         [_PwdField resignFirstResponder];
+
     }else{
         [_PwdAgain resignFirstResponder];
     }
@@ -120,16 +121,61 @@
         self.sureBtn.userInteractionEnabled=NO;
     }
 }
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    return YES;
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [_PwdAgain resignFirstResponder];
+    [_PwdField resignFirstResponder];
 }
 #pragma mark 确定点击
 -(void)makeSure:(UIButton *)btn{
+    if ([self.PwdField.text isEqualToString:self.PwdAgain.text]) {
+        [self getData];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"两次输入密码不一致" delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+        [alert show];
+        [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
+    }
+    
+    
+
+}
+#pragma mark 跳转
+-(void)push{
     ReviewPwdSuccessVC *vc = [ReviewPwdSuccessVC new];
     [self presentViewController:vc animated:YES completion:^{
         
     }];
-
+}
+-(void)getData{
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleShrink];
+    [MMProgressHUD showWithTitle:nil status:@"密码重置中"];
+    NSString *url = [NSString stringWithFormat:@"%@act=save_reset_pwd",BASE_URL];
+    NSString *phoneBase= [Base64Verb JiaMiBase64:self.phoneStr];
+    NSString *codeBase= [Base64Verb JiaMiBase64:self.codeStr];
+    NSString *pwdBase= [Base64Verb JiaMiBase64:self.PwdField.text];
+    NSString *reviewPwdBase= [Base64Verb JiaMiBase64:self.PwdAgain.text];
+    NSDictionary *dic = @{@"mobile" : phoneBase,@"mobile_code":codeBase,@"user_pwd":pwdBase,@"user_pwd_confirm":reviewPwdBase};
+    [NetTools post:url parameters:dic success:^(id responseObject) {
+        
+        NSDictionary *dic = [Base64Verb JieMiBase64:responseObject];
+        if ([dic[@"response_code"] isEqualToString:@"1"]) {
+            [MMProgressHUD dismiss];
+            [self push];
+        }else{
+//            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"密码更新失败" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+//            [alert show];
+//            [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
+            [MMProgressHUD dismissWithError:@"密码更新失败"];
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@",error);
+        [MMProgressHUD dismissWithError:@"密码更新失败"];
+    }];
+    
+}
+- (void)dismissAlert:(UIAlertView*)alert {
+    if ( alert.visible ) {
+        [alert dismissWithClickedButtonIndex:alert.cancelButtonIndex animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

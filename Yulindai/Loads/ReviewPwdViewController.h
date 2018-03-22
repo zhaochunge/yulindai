@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MyBaseViewController.h"
 @interface ReviewPwdViewController : MyBaseViewController
-
+@property(nonatomic,copy)NSString *phoneStr;
+@property(nonatomic,copy)NSString *codeStr;
 @end

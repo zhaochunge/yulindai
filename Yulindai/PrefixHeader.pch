@@ -22,7 +22,6 @@
 #define BASE_URL @"https://fuiou.yulindai.com/mapi/index.php?"
 
 #import "GTMBase64.h"
-//#import "UIColor+ColorChange.h"
 
 #ifndef UkuleleMaster_PrefixHeader_pch
 #define UkuleleMaster_PrefixHeader_pch
@@ -33,6 +32,9 @@
 #import "Masonry.h"
 #import "AFNetworking.h"
 #import "UIColor+ColorChange.h"
+#import "Base64Verb.h"
+#import "NetTools.h"
+#import "MMProgressHUD.h"
 #endif
 #endif
 
