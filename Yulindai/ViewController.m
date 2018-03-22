@@ -33,32 +33,36 @@
  */
 -(void)loginBtnClick:(UIButton *)button{
     
-    NSString *url=@"https://fuiou.yulindai.com/mapi/index.php?";
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleExpand];
+    [MMProgressHUD showDeterminateProgressWithTitle:nil status:@"登录中..."];
     
-    NSDictionary *params=@{
-                           @"email":[NSString stringWithFormat:@"%@",@"david"],//_accountTF.text
-                           @"pwd":[NSString stringWithFormat:@"%@",@"wei199345"],//_pwdTF.text
-                           @"act":@"login"
-                           };
-    NSLog(@"注册页params:%@",params);
+    NSString *url=@"https://fuiou.yulindai.com/mapi/index.php?act=login";
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager POST:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    NSURLSession *session=[NSURLSession sharedSession];
+    NSURL *url2=[NSURL URLWithString:url];
+    NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url2];
+    request.HTTPMethod=@"POST";
+    request.HTTPBody=[[NSString stringWithFormat:@"email=%@&pwd=%@&type=JSON",[NSString stringWithFormat:@"%@",_accountTF.text],[NSString stringWithFormat:@"%@",_pwdTF.text]] dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSURLSessionDataTask *dataTask=[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSLog(@"注册页:%@",responseObject);
-        
-        NSData *data64=[GTMBase64 decodeData:responseObject];
+        NSData *data64=[GTMBase64 decodeData:data];
         NSDictionary *dict=[NSJSONSerialization JSONObjectWithData:data64 options:NSJSONReadingMutableContainers error:nil];
         NSLog(@"dict:%@",dict);
         
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        NSLog(@"error:%@",error);
-        
+        if ([dict[@"response_code"] intValue]==1) {
+            
+            [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
+            
+        }else{
+            [MMProgressHUD dismissWithError:dict[@"show_err"]];
+        }
+
     }];
+    [dataTask resume];
    
 }
+
 /**
  *忘记密码
  */
