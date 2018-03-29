@@ -7,10 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ForgetPwdViewController.h"
-#import "RegisterSuccessViewController.h"
-#import "ReviewPwdSuccessVC.h"
-#import "ReviewPwdViewController.h"
+#import "CDTabbarVC.h"
+#import "LoginVC.h"
 @interface AppDelegate ()
 
 @end
@@ -21,10 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    
-//    ReviewPwdViewController *vc = [ReviewPwdViewController new];
-//    self.window.rootViewController =vc;
-
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    CDTabbarVC *vc = [CDTabbarVC new];
+//    LoginVC *vc =[LoginVC new];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     
     
     

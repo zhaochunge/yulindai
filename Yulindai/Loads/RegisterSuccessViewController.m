@@ -7,7 +7,8 @@
 //
 
 #import "RegisterSuccessViewController.h"
-#import "ViewController.h"
+//#import "ViewController.h"
+#import "LoginVC.h"
 
 @interface RegisterSuccessViewController ()
 
@@ -64,7 +65,7 @@
 }
 #pragma mark 立即登录呢
 -(void)Load:(UIButton *)btn{
-    ViewController *vc = [ViewController new];
+    LoginVC *vc = [LoginVC new];
     [self presentViewController:vc animated:YES completion:^{
         
     }];

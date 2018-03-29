@@ -7,7 +7,8 @@
 //
 
 #import "ReviewPwdSuccessVC.h"
-#import "ViewController.h"
+//#import "ViewController.h"
+#import "LoginVC.h"
 
 @interface ReviewPwdSuccessVC ()
 
@@ -63,7 +64,7 @@
 }
 #pragma mark 立即登录
 -(void)Load:(UIButton *)btn{
-    ViewController *vc = [ViewController new];
+    LoginVC *vc = [LoginVC new];
     [self presentViewController:vc animated:YES completion:^{
         
     }];

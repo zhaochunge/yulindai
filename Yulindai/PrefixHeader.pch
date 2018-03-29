@@ -31,10 +31,15 @@
 
 #import "Masonry.h"
 #import "AFNetworking.h"
-#import "UIColor+ColorChange.h"
+#import "MMProgressHUD.h"
+
+//工具类
 #import "Base64Verb.h"
 #import "NetTools.h"
-#import "MMProgressHUD.h"
+#import "UIColor+ColorChange.h"
+#import "NSString+Size.h"
+#import "UIButton+Edge.h"
+#import "UIView+Size.h"
 #endif
 #endif
 
