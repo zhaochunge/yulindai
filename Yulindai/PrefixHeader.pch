@@ -22,6 +22,7 @@
 #define BASE_URL @"https://fuiou.yulindai.com/mapi/index.php?"
 
 #import "GTMBase64.h"
+#import "YXButton.h"
 
 #ifndef UkuleleMaster_PrefixHeader_pch
 #define UkuleleMaster_PrefixHeader_pch
