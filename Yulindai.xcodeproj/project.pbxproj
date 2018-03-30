@@ -35,8 +35,12 @@
 		F565ECE9205F3EE400F6ED18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECE8205F3EE400F6ED18 /* main.m */; };
 		F565ECF3205F3EE400F6ED18 /* YulindaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECF2205F3EE400F6ED18 /* YulindaiTests.m */; };
 		F565ECFE205F3EE400F6ED18 /* YulindaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */; };
-		F5F7F4EF206C6CCF00DB6F2A /* InvestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4EE206C6CCF00DB6F2A /* InvestVC.m */; };
 		F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4F2206C6D0A00DB6F2A /* LoanVC.m */; };
+		F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4F6206C7B0E00DB6F2A /* InvestVC.m */; };
+		F5F7F4FB206C7B5B00DB6F2A /* ListTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4FA206C7B5B00DB6F2A /* ListTabCell.m */; };
+		F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4FD206CC1A100DB6F2A /* EntrustVC.m */; };
+		F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F500206CCC4E00DB6F2A /* PersonalOpenVC.m */; };
+		F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,10 +120,18 @@
 		F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YulindaiUITests.m; sourceTree = "<group>"; };
 		F565ECFF205F3EE400F6ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F565ED12205F4EBD00F6ED18 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		F5F7F4ED206C6CCF00DB6F2A /* InvestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvestVC.h; sourceTree = "<group>"; };
-		F5F7F4EE206C6CCF00DB6F2A /* InvestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvestVC.m; sourceTree = "<group>"; };
 		F5F7F4F1206C6D0A00DB6F2A /* LoanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoanVC.h; sourceTree = "<group>"; };
 		F5F7F4F2206C6D0A00DB6F2A /* LoanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoanVC.m; sourceTree = "<group>"; };
+		F5F7F4F6206C7B0E00DB6F2A /* InvestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestVC.m; sourceTree = "<group>"; };
+		F5F7F4F7206C7B0E00DB6F2A /* InvestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvestVC.h; sourceTree = "<group>"; };
+		F5F7F4F9206C7B5B00DB6F2A /* ListTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTabCell.h; sourceTree = "<group>"; };
+		F5F7F4FA206C7B5B00DB6F2A /* ListTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTabCell.m; sourceTree = "<group>"; };
+		F5F7F4FC206CC1A100DB6F2A /* EntrustVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntrustVC.h; sourceTree = "<group>"; };
+		F5F7F4FD206CC1A100DB6F2A /* EntrustVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntrustVC.m; sourceTree = "<group>"; };
+		F5F7F4FF206CCC4E00DB6F2A /* PersonalOpenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalOpenVC.h; sourceTree = "<group>"; };
+		F5F7F500206CCC4E00DB6F2A /* PersonalOpenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalOpenVC.m; sourceTree = "<group>"; };
+		F5FDC8AA206DC09500B8DC49 /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
+		F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +217,8 @@
 				F54AB485206353E80019391D /* Base64Verb.m */,
 				F54AB487206381370019391D /* NetTools.h */,
 				F54AB488206381370019391D /* NetTools.m */,
+				F5FDC8AA206DC09500B8DC49 /* CustomAlertView.h */,
+				F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -246,7 +260,7 @@
 		F519CEAB2069E116004E4250 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				F519CEB62069E520004E4250 /* VC */,
+				F519CEB62069E520004E4250 /* MyController */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -260,13 +274,13 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		F519CEB62069E520004E4250 /* VC */ = {
+		F519CEB62069E520004E4250 /* MyController */ = {
 			isa = PBXGroup;
 			children = (
 				F519CEB82069E541004E4250 /* MyVC.h */,
 				F519CEB72069E541004E4250 /* MyVC.m */,
 			);
-			path = VC;
+			path = MyController;
 			sourceTree = "<group>";
 		};
 		F565ECCD205F3EE400F6ED18 = {
@@ -338,8 +352,8 @@
 		F5F7F4EC206C6C5000DB6F2A /* Invest */ = {
 			isa = PBXGroup;
 			children = (
-				F5F7F4ED206C6CCF00DB6F2A /* InvestVC.h */,
-				F5F7F4EE206C6CCF00DB6F2A /* InvestVC.m */,
+				F5F7F4F5206C7AD600DB6F2A /* View */,
+				F5F7F4F4206C7AC800DB6F2A /* Controller */,
 			);
 			path = Invest;
 			sourceTree = "<group>";
@@ -351,6 +365,28 @@
 				F5F7F4F2206C6D0A00DB6F2A /* LoanVC.m */,
 			);
 			path = Loan;
+			sourceTree = "<group>";
+		};
+		F5F7F4F4206C7AC800DB6F2A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5F7F4F7206C7B0E00DB6F2A /* InvestVC.h */,
+				F5F7F4F6206C7B0E00DB6F2A /* InvestVC.m */,
+				F5F7F4FC206CC1A100DB6F2A /* EntrustVC.h */,
+				F5F7F4FD206CC1A100DB6F2A /* EntrustVC.m */,
+				F5F7F4FF206CCC4E00DB6F2A /* PersonalOpenVC.h */,
+				F5F7F500206CCC4E00DB6F2A /* PersonalOpenVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5F7F4F5206C7AD600DB6F2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5F7F4F9206C7B5B00DB6F2A /* ListTabCell.h */,
+				F5F7F4FA206C7B5B00DB6F2A /* ListTabCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FE90A3274437F73704DBA53D /* Frameworks */ = {
@@ -552,13 +588,14 @@
 				F519CEA52069E08F004E4250 /* CDTabBar.m in Sources */,
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
 				F519CEA62069E08F004E4250 /* CDTabbarVC.m in Sources */,
+				F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */,
 				F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */,
 				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
+				F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */,
 				F519CEB12069E33A004E4250 /* LoginVC.m in Sources */,
 				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
 				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
-				F5F7F4EF206C6CCF00DB6F2A /* InvestVC.m in Sources */,
 				F519CEA42069E08F004E4250 /* CDNavigationVC.m in Sources */,
 				F519CE9A2069DFCA004E4250 /* NSString+Size.m in Sources */,
 				F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */,
@@ -567,11 +604,14 @@
 				F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */,
 				F519CEB92069E541004E4250 /* MyVC.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
+				F5F7F4FB206C7B5B00DB6F2A /* ListTabCell.m in Sources */,
 				F54AB489206381370019391D /* NetTools.m in Sources */,
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
+				F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */,
+				F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
