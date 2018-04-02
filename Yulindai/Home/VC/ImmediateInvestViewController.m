@@ -161,9 +161,9 @@
                         button.titleLabel.font=[UIFont systemFontOfSize:14];
                         [button setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateNormal];
                         
-                        [button setTitleEdgeInsets:UIEdgeInsetsMake(0, -button.imageView.size.width, 0, button.imageView.size.width)];
-                        
-                        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 4*button.titleLabel.bounds.size.width, 0, -4*button.titleLabel.bounds.size.width)];
+//                        [button setTitleEdgeInsets:UIEdgeInsetsMake(0, -button.imageView.size.width, 0, button.imageView.size.width)];
+//
+//                        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 4*button.titleLabel.bounds.size.width, 0, -4*button.titleLabel.bounds.size.width)];
                         
                         [cell addSubview:button];
                     }
