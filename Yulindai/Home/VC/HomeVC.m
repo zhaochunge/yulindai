@@ -108,6 +108,7 @@
             
             for (int i=0;i<3; i++) {//48x48=50x50
                 YXButton *button=[YXButton buttonWithType:UIButtonTypeCustom];
+                button.titleLabel.adjustsFontSizeToFitWidth = YES;
                 button.frame=CGRectMake(WIDTH/6.0*(2*i+1)-50, 15, 100, 80);
                 [button setTitle:_btnTitleArray[i] forState:UIControlStateNormal];
                 [button setImage:[UIImage imageNamed:_btnImageArray[i]] forState:UIControlStateNormal];
