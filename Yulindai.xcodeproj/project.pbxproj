@@ -35,12 +35,15 @@
 		F565ECE9205F3EE400F6ED18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECE8205F3EE400F6ED18 /* main.m */; };
 		F565ECF3205F3EE400F6ED18 /* YulindaiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECF2205F3EE400F6ED18 /* YulindaiTests.m */; };
 		F565ECFE205F3EE400F6ED18 /* YulindaiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */; };
+		F58A1F2A2071BAC8009D2EB5 /* ChooseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F58A1F292071BAC8009D2EB5 /* ChooseCollectionCell.m */; };
 		F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4F2206C6D0A00DB6F2A /* LoanVC.m */; };
 		F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4F6206C7B0E00DB6F2A /* InvestVC.m */; };
 		F5F7F4FB206C7B5B00DB6F2A /* ListTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4FA206C7B5B00DB6F2A /* ListTabCell.m */; };
 		F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F4FD206CC1A100DB6F2A /* EntrustVC.m */; };
 		F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5F7F500206CCC4E00DB6F2A /* PersonalOpenVC.m */; };
 		F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */; };
+		F5FDC8AF206DDC8B00B8DC49 /* ChooseTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDC8AE206DDC8B00B8DC49 /* ChooseTabCell.m */; };
+		F5FDC8B3206E0B9700B8DC49 /* CellHeightModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F5FDC8B2206E0B9700B8DC49 /* CellHeightModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +123,8 @@
 		F565ECFD205F3EE400F6ED18 /* YulindaiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YulindaiUITests.m; sourceTree = "<group>"; };
 		F565ECFF205F3EE400F6ED18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F565ED12205F4EBD00F6ED18 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F58A1F282071BAC8009D2EB5 /* ChooseCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseCollectionCell.h; sourceTree = "<group>"; };
+		F58A1F292071BAC8009D2EB5 /* ChooseCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseCollectionCell.m; sourceTree = "<group>"; };
 		F5F7F4F1206C6D0A00DB6F2A /* LoanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoanVC.h; sourceTree = "<group>"; };
 		F5F7F4F2206C6D0A00DB6F2A /* LoanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoanVC.m; sourceTree = "<group>"; };
 		F5F7F4F6206C7B0E00DB6F2A /* InvestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvestVC.m; sourceTree = "<group>"; };
@@ -132,6 +137,10 @@
 		F5F7F500206CCC4E00DB6F2A /* PersonalOpenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalOpenVC.m; sourceTree = "<group>"; };
 		F5FDC8AA206DC09500B8DC49 /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
 		F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
+		F5FDC8AD206DDC8B00B8DC49 /* ChooseTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseTabCell.h; sourceTree = "<group>"; };
+		F5FDC8AE206DDC8B00B8DC49 /* ChooseTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseTabCell.m; sourceTree = "<group>"; };
+		F5FDC8B1206E0B9700B8DC49 /* CellHeightModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellHeightModel.h; sourceTree = "<group>"; };
+		F5FDC8B2206E0B9700B8DC49 /* CellHeightModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellHeightModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +361,7 @@
 		F5F7F4EC206C6C5000DB6F2A /* Invest */ = {
 			isa = PBXGroup;
 			children = (
+				F5FDC8B0206E0B7800B8DC49 /* Model */,
 				F5F7F4F5206C7AD600DB6F2A /* View */,
 				F5F7F4F4206C7AC800DB6F2A /* Controller */,
 			);
@@ -385,8 +395,21 @@
 			children = (
 				F5F7F4F9206C7B5B00DB6F2A /* ListTabCell.h */,
 				F5F7F4FA206C7B5B00DB6F2A /* ListTabCell.m */,
+				F5FDC8AD206DDC8B00B8DC49 /* ChooseTabCell.h */,
+				F5FDC8AE206DDC8B00B8DC49 /* ChooseTabCell.m */,
+				F58A1F282071BAC8009D2EB5 /* ChooseCollectionCell.h */,
+				F58A1F292071BAC8009D2EB5 /* ChooseCollectionCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F5FDC8B0206E0B7800B8DC49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F5FDC8B1206E0B9700B8DC49 /* CellHeightModel.h */,
+				F5FDC8B2206E0B9700B8DC49 /* CellHeightModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FE90A3274437F73704DBA53D /* Frameworks */ = {
@@ -589,6 +612,7 @@
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
 				F519CEA62069E08F004E4250 /* CDTabbarVC.m in Sources */,
 				F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */,
+				F58A1F2A2071BAC8009D2EB5 /* ChooseCollectionCell.m in Sources */,
 				F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */,
 				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
@@ -608,10 +632,12 @@
 				F54AB489206381370019391D /* NetTools.m in Sources */,
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
+				F5FDC8B3206E0B9700B8DC49 /* CellHeightModel.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
 				F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */,
 				F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */,
+				F5FDC8AF206DDC8B00B8DC49 /* ChooseTabCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
