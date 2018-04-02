@@ -11,12 +11,16 @@
 #import "AboutManageViewController.h"
 #import "SafeViewController.h"
 #import "NewsViewController.h"
+#import "ImmediateInvestViewController.h"
 
 @interface HomeVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)NSArray *btnTitleArray;
 @property(nonatomic,strong)NSArray *btnImageArray;
+@property(nonatomic,strong)UIScrollView *scrollView;
+
+@property(nonatomic,strong)NSMutableArray *bannerArray;
 
 @end
 
@@ -29,6 +33,7 @@
     self.navigationItem.title = @"誉霖贷";
     _btnTitleArray=@[@"关于我们",@"关于理财",@"安全保障"];
     _btnImageArray=@[@"关于我们-icon",@"理财-icon",@"安全保障-icon"];
+    self.bannerArray=[NSMutableArray array];
     
     UIButton *leftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame=CGRectMake(0, 0, 15, 15);
@@ -47,12 +52,57 @@
     
 }
 
+- (void)timeClick{
+    
+//    int num=(int)_bannerArray.count;
+    int num=3;
+    //改变偏移量
+    UIScrollView * scrollView = (UIScrollView*)[self.view viewWithTag:1000];
+    //0 1 2 3 4
+    static int i = 0;
+    
+    //切换的动画效果 滚动到某个位置的动画效果
+    [scrollView scrollRectToVisible:CGRectMake(WIDTH*i, 0, WIDTH, HEIGHT) animated:YES];
+    
+    if (i<=num) {
+        i++;
+    }else{
+        i=0;
+    }
+}
+
+-(void)picBtnClick:(UIButton *)button{
+    NSLog(@"picBtnClick");
+}
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"homeCell"];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     if (indexPath.section==0) {
         if (indexPath.row==0) {
             cell.textLabel.text=@"图片啊";
+            
+            _scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 150)];
+            
+            NSInteger picNum=3;
+            _scrollView.contentSize = CGSizeMake(WIDTH*3, 100);
+            _scrollView.pagingEnabled = YES;
+            _scrollView.tag=1000;
+            _scrollView.bounces = NO;
+            _scrollView.showsHorizontalScrollIndicator = NO;
+            _scrollView.showsVerticalScrollIndicator = NO;
+            
+            for (int i=0; i<3; i++) {
+                UIButton *picBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+                picBtn.frame=CGRectMake(WIDTH*i, 0, WIDTH, 150);
+                picBtn.backgroundColor=[UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1];
+                [picBtn addTarget:self action:@selector(picBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+                [_scrollView addSubview:picBtn];
+            }
+            
+//            [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeClick) userInfo:nil repeats:YES];
+           
+            [cell addSubview:_scrollView];
             
         }else{
             
@@ -111,6 +161,8 @@
 
 -(void)suguniButtonClick:(UIButton *)button{
     NSLog(@"suguniButtonClick");
+    ImmediateInvestViewController *iiVC=[[ImmediateInvestViewController alloc]init];
+    [self.navigationController pushViewController:iiVC animated:YES];
 }
 
 -(UILabel *)setupCanLabelWithFrame:(CGRect)frame text:(NSString *)text{
@@ -183,6 +235,10 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    UIView *headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 150)];
+//    headView.backgroundColor=[UIColor cyanColor];
+//
+    
     return nil;
 }
 
@@ -205,7 +261,6 @@
         }
     }
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

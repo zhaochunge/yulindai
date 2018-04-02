@@ -73,16 +73,10 @@
     if (indexPath.row==0) {
         return 50;
     }else{
-//        NSInteger row = [indexPath row];
-        // 列寬
         CGFloat contentWidth = WIDTH-20;
-        // 用何種字體進行顯示
         UIFont *font = [UIFont systemFontOfSize:15];
-        // 該行要顯示的內容
         NSString *content =@"どこで生れたかとんと見当けんとうがつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪どうあくな種族であったそうだ。この書生というのは時々我々を捕つかまえて煮にて食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。";
-        // 計算出顯示完內容需要的最小尺寸
         CGSize size = [content sizeWithFont:font constrainedToSize:CGSizeMake(contentWidth, 1000.0f) lineBreakMode:UILineBreakModeWordWrap];
-        // 這裏返回需要的高度
         return size.height+30;
     }
 }
