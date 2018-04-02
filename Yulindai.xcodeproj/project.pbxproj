@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183A8907206C85BF007ED767 /* YXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8905206C85BE007ED767 /* YXButton.m */; };
+		183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8909206C8CE0007ED767 /* AboutMeViewController.m */; };
+		183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890C206C9088007ED767 /* AboutManageViewController.m */; };
+		183A8910206C9119007ED767 /* SafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890F206C9119007ED767 /* SafeViewController.m */; };
+		183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8912206CB466007ED767 /* SafeguardViewController.m */; };
+		183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8915206CB6D9007ED767 /* NewsViewController.m */; };
+		183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8918206CCB2E007ED767 /* NewsDetailViewController.m */; };
 		1862CF85205F649A002EE70C /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862CF83205F649A002EE70C /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */; };
 		F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */; };
@@ -65,6 +72,20 @@
 
 /* Begin PBXFileReference section */
 		075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.release.xcconfig"; sourceTree = "<group>"; };
+		183A8905206C85BE007ED767 /* YXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXButton.m; sourceTree = "<group>"; };
+		183A8906206C85BE007ED767 /* YXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXButton.h; sourceTree = "<group>"; };
+		183A8908206C8CE0007ED767 /* AboutMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		183A8909206C8CE0007ED767 /* AboutMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
+		183A890B206C9088007ED767 /* AboutManageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutManageViewController.h; sourceTree = "<group>"; };
+		183A890C206C9088007ED767 /* AboutManageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutManageViewController.m; sourceTree = "<group>"; };
+		183A890E206C9119007ED767 /* SafeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeViewController.h; sourceTree = "<group>"; };
+		183A890F206C9119007ED767 /* SafeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeViewController.m; sourceTree = "<group>"; };
+		183A8911206CB466007ED767 /* SafeguardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SafeguardViewController.h; sourceTree = "<group>"; };
+		183A8912206CB466007ED767 /* SafeguardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SafeguardViewController.m; sourceTree = "<group>"; };
+		183A8914206CB6D9007ED767 /* NewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		183A8915206CB6D9007ED767 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		183A8917206CCB2E007ED767 /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		183A8918206CCB2E007ED767 /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
 		1862CF82205F649A002EE70C /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		1862CF83205F649A002EE70C /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		1862CF84205F649A002EE70C /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
@@ -277,8 +298,22 @@
 		F519CEB22069E4F0004E4250 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				183A8906206C85BE007ED767 /* YXButton.h */,
+				183A8905206C85BE007ED767 /* YXButton.m */,
 				F519CEB42069E51B004E4250 /* HomeVC.h */,
 				F519CEB32069E51B004E4250 /* HomeVC.m */,
+				183A8908206C8CE0007ED767 /* AboutMeViewController.h */,
+				183A8909206C8CE0007ED767 /* AboutMeViewController.m */,
+				183A890B206C9088007ED767 /* AboutManageViewController.h */,
+				183A890C206C9088007ED767 /* AboutManageViewController.m */,
+				183A890E206C9119007ED767 /* SafeViewController.h */,
+				183A890F206C9119007ED767 /* SafeViewController.m */,
+				183A8911206CB466007ED767 /* SafeguardViewController.h */,
+				183A8912206CB466007ED767 /* SafeguardViewController.m */,
+				183A8914206CB6D9007ED767 /* NewsViewController.h */,
+				183A8915206CB6D9007ED767 /* NewsViewController.m */,
+				183A8917206CCB2E007ED767 /* NewsDetailViewController.h */,
+				183A8918206CCB2E007ED767 /* NewsDetailViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -610,17 +645,21 @@
 				F519CEBC2069E5D3004E4250 /* ZhuCeViewController.m in Sources */,
 				F519CEA52069E08F004E4250 /* CDTabBar.m in Sources */,
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
+				183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */,
 				F519CEA62069E08F004E4250 /* CDTabbarVC.m in Sources */,
 				F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */,
 				F58A1F2A2071BAC8009D2EB5 /* ChooseCollectionCell.m in Sources */,
 				F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */,
+				183A8910206C9119007ED767 /* SafeViewController.m in Sources */,
 				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
+				183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */,
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
 				F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */,
 				F519CEB12069E33A004E4250 /* LoginVC.m in Sources */,
 				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
 				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
 				F519CEA42069E08F004E4250 /* CDNavigationVC.m in Sources */,
+				183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */,
 				F519CE9A2069DFCA004E4250 /* NSString+Size.m in Sources */,
 				F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */,
 				F519CE9C2069DFCA004E4250 /* UIView+Size.m in Sources */,
@@ -631,8 +670,11 @@
 				F5F7F4FB206C7B5B00DB6F2A /* ListTabCell.m in Sources */,
 				F54AB489206381370019391D /* NetTools.m in Sources */,
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
+				183A8907206C85BF007ED767 /* YXButton.m in Sources */,
+				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				F5FDC8B3206E0B9700B8DC49 /* CellHeightModel.m in Sources */,
+				183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
 				F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */,
