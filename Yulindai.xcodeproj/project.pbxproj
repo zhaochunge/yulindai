@@ -14,6 +14,7 @@
 		183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8912206CB466007ED767 /* SafeguardViewController.m */; };
 		183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8915206CB6D9007ED767 /* NewsViewController.m */; };
 		183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8918206CCB2E007ED767 /* NewsDetailViewController.m */; };
+		185DDA7D206DC8CD009F07DD /* ImmediateInvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DDA7C206DC8CD009F07DD /* ImmediateInvestViewController.m */; };
 		1862CF85205F649A002EE70C /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862CF83205F649A002EE70C /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */; };
 		F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */; };
@@ -86,6 +87,8 @@
 		183A8915206CB6D9007ED767 /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		183A8917206CCB2E007ED767 /* NewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
 		183A8918206CCB2E007ED767 /* NewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		185DDA7B206DC8CD009F07DD /* ImmediateInvestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImmediateInvestViewController.h; sourceTree = "<group>"; };
+		185DDA7C206DC8CD009F07DD /* ImmediateInvestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImmediateInvestViewController.m; sourceTree = "<group>"; };
 		1862CF82205F649A002EE70C /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		1862CF83205F649A002EE70C /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		1862CF84205F649A002EE70C /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 				183A8915206CB6D9007ED767 /* NewsViewController.m */,
 				183A8917206CCB2E007ED767 /* NewsDetailViewController.h */,
 				183A8918206CCB2E007ED767 /* NewsDetailViewController.m */,
+				185DDA7B206DC8CD009F07DD /* ImmediateInvestViewController.h */,
+				185DDA7C206DC8CD009F07DD /* ImmediateInvestViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -677,6 +682,7 @@
 				183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
+				185DDA7D206DC8CD009F07DD /* ImmediateInvestViewController.m in Sources */,
 				F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */,
 				F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */,
 				F5FDC8AF206DDC8B00B8DC49 /* ChooseTabCell.m in Sources */,
