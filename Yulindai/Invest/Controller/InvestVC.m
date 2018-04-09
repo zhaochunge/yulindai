@@ -305,17 +305,20 @@
         if (![_btnTagArr containsObject:[NSString stringWithFormat:@"%ld",btn.tag]]) {
             [_btnTagArr addObject:[NSString stringWithFormat:@"%ld",btn.tag]];
             NSString *str = [NSString stringWithFormat:@"%ld",btn.tag-900];
+//            [btn setImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
             [self.cellIsShowAll setObject:@"YES" forKey:str];
         }else{
             NSString *str = [NSString stringWithFormat:@"%ld",btn.tag-900];
             [self.cellIsShowAll setObject:@"NO" forKey:str];
             [_btnTagArr removeObject:[NSString stringWithFormat:@"%ld",btn.tag]];
+//            [btn setImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
         }
     }else{
         NSString *str = [NSString stringWithFormat:@"%ld",btn.tag-900];
         [self.cellIsShowAll setObject:@"YES" forKey:str];
         [_btnTagArr addObject:[NSString stringWithFormat:@"%ld",btn.tag]];
-    }
+//            [btn setImage:[UIImage imageNamed:@""] forState:(UIControlStateNormal)];
+    }                                      
     [_chooseTable reloadData];
 }
 
