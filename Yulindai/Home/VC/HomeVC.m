@@ -47,6 +47,7 @@
 }
 
 -(void)newsClick{
+    
     NewsViewController *newsVC=[[NewsViewController alloc]init];
     [self.navigationController pushViewController:newsVC animated:YES];
     
@@ -83,7 +84,6 @@
             cell.textLabel.text=@"图片啊";
             
             _scrollView=[[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, 150)];
-            
             NSInteger picNum=3;
             _scrollView.contentSize = CGSizeMake(WIDTH*3, 100);
             _scrollView.pagingEnabled = YES;
@@ -144,6 +144,7 @@
             [cell addSubview:lab5];
             
             UIButton *button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+            button.titleLabel.adjustsFontSizeToFitWidth=YES;
             button.frame=CGRectMake(WIDTH/3.0*2, 30, WIDTH/4.0, 30);
             button.backgroundColor=[UIColor orangeColor];
             [button setTitle:@"立即投资" forState:UIControlStateNormal];
@@ -169,6 +170,7 @@
 -(UILabel *)setupCanLabelWithFrame:(CGRect)frame text:(NSString *)text{
     UILabel *lab1=[[UILabel alloc]initWithFrame:frame];
     lab1.text=text;
+    lab1.adjustsFontSizeToFitWidth=YES;
     lab1.font=[UIFont systemFontOfSize:16];
     lab1.textAlignment=NSTextAlignmentCenter;
     return lab1;
@@ -177,6 +179,7 @@
 -(UILabel *)setupGuLabelWithFrame:(CGRect)frame text:(NSString *)text{
     UILabel *lab1=[[UILabel alloc]initWithFrame:frame];
     lab1.text=text;
+    lab1.adjustsFontSizeToFitWidth=YES;
     lab1.textColor=[UIColor darkGrayColor];
     lab1.font=[UIFont systemFontOfSize:15];
     lab1.textAlignment=NSTextAlignmentCenter;

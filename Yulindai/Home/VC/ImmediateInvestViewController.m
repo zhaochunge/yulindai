@@ -31,7 +31,7 @@
     _titleArray=@[@"发标时间",@"风险控制",@"审核记录",@"用户信息",@"借款描述",@"借款记录"];
     _leiArray=@[@[@"信用报告",@"实名认证",@"工作认证"],@[@"收入认证",@"房产认证",@"车产认证"]];
     _jiluArray=[[NSMutableArray alloc]initWithArray:@[@[@"借款笔数：1",@"成功笔数：1",@"还清笔数：1"],@[@"共计借入：100万",@"逾期次数：0",@"严重逾期：0"],@[@"逾期金额：0",@"待还本息：0",@"共计借出：0"],@[@"待收本息：0",@"",@""]]];
-    _xinxiArray=[[NSMutableArray alloc]initWithArray:@[@[@"信用等级：HR",@"信用额度：1，000，000"],@[@"性别：女",@"年龄：18"],@[@"工作收入：100",@"有无购房：无"],@[@"有无购车：无",@"有无房贷：无"]]];
+    _xinxiArray=[[NSMutableArray alloc]initWithArray:@[@[@"信用等级：HR",@"信用额度：1，000，000"],@[@"性       别：女",@"年       龄：18"],@[@"工作收入：100",@"有无购房：无"],@[@"有无购车：无",@"有无房贷：无"]]];
     _btnTitleArray=@[@"借入者信息",@"投标记录",@"还款详情"];
     
     //CellTable数据
@@ -161,11 +161,7 @@
                         [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
                         button.titleLabel.font=[UIFont systemFontOfSize:14];
                         [button setImage:[UIImage imageNamed:@"选中"] forState:UIControlStateNormal];
-                        
-//                        [button setTitleEdgeInsets:UIEdgeInsetsMake(0, -button.imageView.size.width, 0, button.imageView.size.width)];
-//
-//                        [button setImageEdgeInsets:UIEdgeInsetsMake(0, 4*button.titleLabel.bounds.size.width, 0, -4*button.titleLabel.bounds.size.width)];
-                        
+                        [button setImagePositionWithType:SSImagePositionTypeRight spacing:2];
                         [cell addSubview:button];
                     }
                 }
@@ -222,16 +218,28 @@
                     }
                 }
             }
-            
+//
         }else{
-            cell.textLabel.text=_CTDataArray[indexPath.row];
-            cell.textLabel.textColor=[UIColor darkGrayColor];
-            cell.textLabel.font=[UIFont systemFontOfSize:15];
+            
+//            cell.textLabel.text=_CTDataArray[indexPath.row];
+//            cell.textLabel.textColor=[UIColor darkGrayColor];
+//            cell.textLabel.font=[UIFont systemFontOfSize:15];
+            
+            UILabel *banLab=[self setupLabelWithFrame:CGRectMake(20, 10, 20, 20) text:[NSString stringWithFormat:@"%ld",indexPath.row+1] font:14];
+            [cell addSubview:banLab];
+            
+            UILabel *sumLab=[self setupLabelWithFrame:CGRectMake(WIDTH/4.0, 0, WIDTH/2.0, 20) text:[NSString stringWithFormat:@"%@",@"￥8000.00"] font:14];
+            sumLab.textAlignment=NSTextAlignmentCenter;
+            [cell addSubview:sumLab];
+            
+            UILabel *dateLab=[self setupLabelWithFrame:CGRectMake(WIDTH/4.0, 20, WIDTH/2.0, 20) text:[NSString stringWithFormat:@"%@",@"2018-4-3"] font:14];
+            dateLab.textAlignment=NSTextAlignmentCenter;
+            [cell addSubview:dateLab];
             
         }
         return cell;
     }
-        
+    
 }
 
 -(UILabel *)setupLabelWithFrame:(CGRect)frame text:(NSString *)text font:(NSInteger)font {
