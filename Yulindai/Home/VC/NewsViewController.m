@@ -31,6 +31,7 @@
 //    self.navigationItem.rightBarButtonItem=rightItem;
     [self setupNewsEmptyView];
     [self setupNewsView];
+    [self leftItem];
 }
 
 //-(void)editClick{

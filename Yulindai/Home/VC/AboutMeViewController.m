@@ -20,6 +20,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"关于我们";
     [self createUI];
+    [self leftItem];
 }
 
 -(void)createUI{

@@ -98,10 +98,16 @@
         
         if ([dict[@"response_code"] intValue]==1) {
             [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
-            RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
-            [self presentViewController:vc animated:YES completion:^{
-
-            }];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
+                [self presentViewController:vc animated:YES completion:^{
+                    
+                }];
+                
+            });
+            
+           
         }else{
             [MMProgressHUD dismissWithError:dict[@"show_err"]];
         }
@@ -125,7 +131,7 @@
     NSURL *url2=[NSURL URLWithString:url];
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url2];
     request.HTTPMethod=@"POST";
-    request.HTTPBody=[[NSString stringWithFormat:@"mobile=%@&type=JSON",[NSString stringWithFormat:@"%@",@"13074116296"]] dataUsingEncoding:NSUTF8StringEncoding];//_verCodeTF.text
+    request.HTTPBody=[[NSString stringWithFormat:@"mobile=%@&type=JSON",[NSString stringWithFormat:@"%@",_mobileTF.text]] dataUsingEncoding:NSUTF8StringEncoding];//_verCodeTF.text
     
     NSURLSessionDataTask *dataTask=[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         

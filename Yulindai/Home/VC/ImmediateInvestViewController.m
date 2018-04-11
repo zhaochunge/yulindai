@@ -39,6 +39,7 @@
     
     
     [self createUI];
+    [self leftItem];
 }
 
 -(void)createUI{

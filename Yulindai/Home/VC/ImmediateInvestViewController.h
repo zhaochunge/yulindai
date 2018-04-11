@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface ImmediateInvestViewController : UIViewController
+@interface ImmediateInvestViewController : BaseVC
 
 @end

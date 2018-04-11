@@ -26,6 +26,7 @@
     _titleArray=@[@"网上理财安全建议",@"贷款审核与保障",@"交易安全保障",@"本金保障"];
 //    _safeguardTitleArray=@[@""];
     [self createUI];
+    [self leftItem];
 }
 
 -(void)createUI{

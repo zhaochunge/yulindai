@@ -22,6 +22,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = @"开通资金托管账户";
     [self createView];
+    [self leftItem];
 }
 -(void)createView{
     UILabel *titleLab = [UILabel new];

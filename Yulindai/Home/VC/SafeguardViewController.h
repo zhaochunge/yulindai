@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface SafeguardViewController : UIViewController
+@interface SafeguardViewController : BaseVC
 
 @property(nonatomic,strong)NSString *selfTitle;
 @property(nonatomic,strong)NSString *url;

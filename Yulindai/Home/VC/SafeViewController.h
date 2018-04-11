@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface SafeViewController : UIViewController
+@interface SafeViewController : BaseVC
 
 @end

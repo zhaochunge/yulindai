@@ -12,6 +12,7 @@
 #import "ChooseTabCell.h"
 #import "CellHeightModel.h"
 #import "ChooseCollectionCell.h"
+#import "ImmediateInvestViewController.h"
 
 @interface InvestVC ()<UITableViewDelegate,UITableViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate>
 @property(nonatomic,strong)UITableView *tableList;
@@ -50,7 +51,7 @@
     self.selectArr = [NSMutableArray array];
     [self rightItem];
     [self createTable];
-    [self createView];
+//    [self createView];
 }
 -(void)rightItem{
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -200,11 +201,10 @@
     if (tableView == self.tableList) {
         ListTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listReuse" forIndexPath:indexPath];
         [cell.btn addTarget:self action:@selector(investClick:) forControlEvents:(UIControlEventTouchUpInside)];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }else{
         ChooseTabCell *cell = [tableView dequeueReusableCellWithIdentifier:@"chooseReuse" forIndexPath:indexPath];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell setCellContent:self.chooseData andIsShow:[[self.cellIsShowAll objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]] boolValue]  andCellIndexPath:indexPath];
         cell.collection.dataSource = self;
         cell.collection.delegate = self;
@@ -245,7 +245,8 @@
 }
 #pragma mark 立即投资点击
 -(void)investClick:(UIButton *)btn{
-    EntrustVC *vc = [EntrustVC new];
+//    EntrustVC *vc = [EntrustVC new];
+    ImmediateInvestViewController *vc = [ImmediateInvestViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

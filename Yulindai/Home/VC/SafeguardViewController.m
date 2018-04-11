@@ -21,6 +21,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     
     [self createUI];
+    [self leftItem];
     
 }
 
