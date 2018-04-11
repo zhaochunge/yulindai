@@ -1,14 +1,13 @@
 //
-//  EntrustVC.h
+//  BaseVC.h
 //  Yulindai
 //
-//  Created by zcg on 2018/3/29.
+//  Created by zcg on 2018/4/11.
 //  Copyright © 2018年 zcg. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseVC.h"
 
-@interface EntrustVC : BaseVC
-
+@interface BaseVC : UIViewController
+-(void)leftItem;
 @end

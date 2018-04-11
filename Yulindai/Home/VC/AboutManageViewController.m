@@ -20,6 +20,7 @@
     self.view.backgroundColor=[UIColor whiteColor];
     self.title=@"关于理财";
     [self createUI];
+    [self leftItem];
 }
 
 -(void)createUI{

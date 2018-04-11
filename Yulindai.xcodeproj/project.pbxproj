@@ -33,6 +33,7 @@
 		F519CEB52069E51B004E4250 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEB32069E51B004E4250 /* HomeVC.m */; };
 		F519CEB92069E541004E4250 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEB72069E541004E4250 /* MyVC.m */; };
 		F519CEBC2069E5D3004E4250 /* ZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEBB2069E5D3004E4250 /* ZhuCeViewController.m */; };
+		F5401029207DD2E400E113EA /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5401028207DD2E400E113EA /* BaseVC.m */; };
 		F54AB486206353E80019391D /* Base64Verb.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB485206353E80019391D /* Base64Verb.m */; };
 		F54AB489206381370019391D /* NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB488206381370019391D /* NetTools.m */; };
 		F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDA205F3EE400F6ED18 /* AppDelegate.m */; };
@@ -126,6 +127,8 @@
 		F519CEB82069E541004E4250 /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
 		F519CEBA2069E5D3004E4250 /* ZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuCeViewController.h; sourceTree = "<group>"; };
 		F519CEBB2069E5D3004E4250 /* ZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuCeViewController.m; sourceTree = "<group>"; };
+		F5401027207DD2E400E113EA /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		F5401028207DD2E400E113EA /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		F54AB484206353E80019391D /* Base64Verb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Verb.h; sourceTree = "<group>"; };
 		F54AB485206353E80019391D /* Base64Verb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64Verb.m; sourceTree = "<group>"; };
 		F54AB487206381370019391D /* NetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetTools.h; sourceTree = "<group>"; };
@@ -236,6 +239,8 @@
 			children = (
 				F50665DC205F8D9600B3B3BB /* MyBaseViewController.h */,
 				F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */,
+				F5401027207DD2E400E113EA /* BaseVC.h */,
+				F5401028207DD2E400E113EA /* BaseVC.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				F519CE9C2069DFCA004E4250 /* UIView+Size.m in Sources */,
 				F50665E8205F9E5100B3B3BB /* UIColor+ColorChange.m in Sources */,
 				F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */,
+				F5401029207DD2E400E113EA /* BaseVC.m in Sources */,
 				F519CEB92069E541004E4250 /* MyVC.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
 				F5F7F4FB206C7B5B00DB6F2A /* ListTabCell.m in Sources */,

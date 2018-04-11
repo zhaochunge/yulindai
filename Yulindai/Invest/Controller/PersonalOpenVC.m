@@ -27,6 +27,7 @@
     self.navigationItem.title =@"个人开通";
     self.view.backgroundColor = LINECOLOR;
     [self createView];
+    [self leftItem];
 }
 -(void)createView{
     UIImageView *logoImg = [UIImageView new];

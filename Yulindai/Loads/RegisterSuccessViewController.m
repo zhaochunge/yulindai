@@ -65,10 +65,16 @@
 }
 #pragma mark 立即登录呢
 -(void)Load:(UIButton *)btn{
-    LoginVC *vc = [LoginVC new];
-    [self presentViewController:vc animated:YES completion:^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         
-    }];
+        LoginVC *vc = [LoginVC new];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+        
+        
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {

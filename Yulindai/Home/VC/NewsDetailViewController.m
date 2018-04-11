@@ -28,6 +28,7 @@
     self.navigationItem.rightBarButtonItem=rightItem;
     
     [self createUI];
+    [self leftItem];
     
 }
 

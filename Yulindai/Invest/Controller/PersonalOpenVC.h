@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseVC.h"
 
-@interface PersonalOpenVC : UIViewController
+@interface PersonalOpenVC : BaseVC
 
 @end

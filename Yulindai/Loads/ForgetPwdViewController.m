@@ -188,7 +188,13 @@
     ReviewPwdViewController *vc = [ReviewPwdViewController new];
     vc.codeStr = self.codeField.text;
     vc.phoneStr = self.phoneField.text;
-    [self presentModalViewController:vc animated:YES]; 
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+       [self presentModalViewController:vc animated:YES];
+        
+        
+    });
+   
 }
 
 -(void)getData{
@@ -203,16 +209,12 @@
            success:^(id responseObject) {
                NSDictionary *dic = [Base64Verb JieMiBase64:responseObject];
                if ([dic[@"response_code"] isEqualToString:@"1"]) {
-//                   UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"验证码已发送" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
-//                   [alert show];
-//                   [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
-                   [MMProgressHUD dismissWithSuccess:@"验证码已发送"];
+
+                   [MMProgressHUD dismissWithSuccess:dic[@"show_err"]];
                    [self openCountdown];
                }else{
-//                   UIAlertView* alert = [[UIAlertView alloc]initWithTitle:nil message:@"验证码发送失败" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
-//                   [alert show];
-//                   [self performSelector:@selector(dismissAlert:) withObject:alert afterDelay:1.0];
-                   [MMProgressHUD dismissWithError:@"验证码发送失败"];
+
+                   [MMProgressHUD dismissWithError:dic[@"show_err"]];
                }
            } failure:^(NSError *error) {
                NSLog(@"失败");

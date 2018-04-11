@@ -128,10 +128,16 @@
         
         if ([dict[@"response_code"] intValue]==1) {
             [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
-            RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
-            [self presentViewController:vc animated:YES completion:^{
-
-            }];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                RegisterSuccessViewController *vc = [RegisterSuccessViewController new];
+                [self presentViewController:vc animated:YES completion:^{
+                    
+                }];
+                
+            });
+            
+           
         }else{
             [MMProgressHUD dismissWithError:dict[@"show_err"]];
         }

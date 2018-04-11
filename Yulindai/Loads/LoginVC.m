@@ -9,6 +9,7 @@
 #import "LoginVC.h"
 #import "ZhuCeViewController.h"
 #import "ForgetPwdViewController.h"
+#import "CDTabbarVC.h"
 @interface LoginVC ()<UITextFieldDelegate>
 @property(nonatomic,strong)UITextField *accountTF;
 @property(nonatomic,strong)UITextField *pwdTF;
@@ -49,6 +50,13 @@
             
             [MMProgressHUD dismissWithSuccess:dict[@"show_err"]];
             
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                    CDTabbarVC *vc = [CDTabbarVC new];
+                    self.view.window.rootViewController = vc;
+                
+                
+            });
         }else{
             [MMProgressHUD dismissWithError:dict[@"show_err"]];
         }

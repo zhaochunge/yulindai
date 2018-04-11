@@ -140,10 +140,16 @@
 }
 #pragma mark 跳转
 -(void)push{
-    ReviewPwdSuccessVC *vc = [ReviewPwdSuccessVC new];
-    [self presentViewController:vc animated:YES completion:^{
+    dispatch_async(dispatch_get_main_queue(), ^{
         
-    }];
+        ReviewPwdSuccessVC *vc = [ReviewPwdSuccessVC new];
+        [self presentViewController:vc animated:YES completion:^{
+            
+        }];
+        
+        
+    });
+    
 }
 -(void)getData{
     [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleShrink];
