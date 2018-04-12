@@ -9,7 +9,7 @@
 #import "ZhuCeViewController.h"
 #import "RegisterSuccessViewController.h"
 
-@interface ZhuCeViewController ()<UITextFieldDelegate>
+@interface ZhuCeViewController ()<UITextFieldDelegate,UIActionSheetDelegate>
 
 @property(nonatomic,strong)UITextField *accountTF;
 @property(nonatomic,strong)UITextField *mobileTF;
@@ -18,6 +18,10 @@
 @property(nonatomic,strong)UITextField *rePwdTF;
 @property(nonatomic,strong)UIButton *verBtn;
 @property(nonatomic,strong)UIView *miniView;
+
+//原型图修改
+@property(nonatomic,strong)UIButton *chooseBtn;
+
 
 @end
 
@@ -60,14 +64,24 @@
     _verBtn=[self btnWithFrame:CGRectMake(WIDTH-150, _verCodeTF.frame.origin.y+10, 110, 20) title:@"获取验证码" color:NAVCOLOR image:@"" size:14 action:@selector(verBtnClick:)];
     [self.view addSubview:_verBtn];
     
-    UIButton *checkBtn=[self btnWithFrame:CGRectMake(40, _rePwdTF.frame.origin.y+80, 20, 20) title:@"" color:nil image:@"选中" size:1 action:nil];
+    //xiugai
+    _chooseBtn=[self btnWithFrame:CGRectMake(50, _rePwdTF.frame.origin.y+50, WIDTH-80, 40) title:@"出借人" color:[UIColor lightGrayColor] image:@"" size:14 action:@selector(chooseBtnClick:)];
+    _chooseBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [_chooseBtn setImage:[UIImage imageNamed:@"三角"] forState:UIControlStateNormal];
+    [_chooseBtn setImageEdgeInsets:UIEdgeInsetsMake(0, WIDTH-110, 0, 0)];
+    [self.view addSubview:_chooseBtn];
+    UILabel *line=[[UILabel alloc]initWithFrame:CGRectMake(40,_rePwdTF.frame.origin.y+90, WIDTH-80, 1)];
+    line.backgroundColor=[UIColor lightGrayColor];
+    [self.view addSubview:line];
+    
+    UIButton *checkBtn=[self btnWithFrame:CGRectMake(40, _chooseBtn.frame.origin.y+80, 20, 20) title:@"" color:nil image:@"选中" size:1 action:nil];
     [self.view addSubview:checkBtn];
     
     NSString *linkStr = @"http://www.baidu.com";
     NSDictionary *dict = @{NSLinkAttributeName:[NSURL URLWithString:linkStr]};
     NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:@"已阅读并同意《誉霖贷服务条款》"];
     [attribute addAttributes:dict range:NSMakeRange(6, 9)];
-    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(60, _rePwdTF.frame.origin.y+75, 200, 25)];
+    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(60, _chooseBtn.frame.origin.y+75, 200, 25)];
     textView.attributedText = attribute;
     [self.view addSubview:textView];
     textView.editable = NO;
@@ -76,6 +90,22 @@
     nextBtn.layer.borderColor=[UIColor darkGrayColor].CGColor;
     nextBtn.layer.borderWidth=1;
     [self.view addSubview:nextBtn];
+    
+    
+}
+
+-(void)chooseBtnClick:(UIButton *)button{
+    UIActionSheet * sh = [[UIActionSheet alloc]initWithTitle:@"请选择您的身份" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"借款人",@"出借人", nil];
+    [sh showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"点击按钮下标:%ld",buttonIndex);
+    if (buttonIndex==0) {
+        [_chooseBtn setTitle:@"借款人" forState:UIControlStateNormal];
+    }else{
+        [_chooseBtn setTitle:@"出借人" forState:UIControlStateNormal];
+    }
     
 }
 
