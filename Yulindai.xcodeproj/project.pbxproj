@@ -23,6 +23,11 @@
 		F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665DD205F8D9600B3B3BB /* MyBaseViewController.m */; };
 		F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */; };
 		F50665E8205F9E5100B3B3BB /* UIColor+ColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665E7205F9E5100B3B3BB /* UIColor+ColorChange.m */; };
+		F51551DE207F216800CC7453 /* myTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F51551DD207F216800CC7453 /* myTableCell.m */; };
+		F51551E1207F305F00CC7453 /* TopUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F51551E0207F305F00CC7453 /* TopUpVC.m */; };
+		F51551E4207F3F9700CC7453 /* CashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F51551E3207F3F9700CC7453 /* CashVC.m */; };
+		F51551E7207F483E00CC7453 /* CertificMessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F51551E6207F483E00CC7453 /* CertificMessageVC.m */; };
+		F51551EA207F4AAF00CC7453 /* CerTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F51551E9207F4AAF00CC7453 /* CerTableCell.m */; };
 		F519CE9A2069DFCA004E4250 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CE962069DFC9004E4250 /* NSString+Size.m */; };
 		F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CE972069DFC9004E4250 /* UIButton+Edge.m */; };
 		F519CE9C2069DFCA004E4250 /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CE982069DFC9004E4250 /* UIView+Size.m */; };
@@ -107,6 +112,16 @@
 		F50665E3205F94B200B3B3BB /* ReviewPwdSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReviewPwdSuccessVC.m; sourceTree = "<group>"; };
 		F50665E6205F9E5100B3B3BB /* UIColor+ColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorChange.h"; sourceTree = "<group>"; };
 		F50665E7205F9E5100B3B3BB /* UIColor+ColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorChange.m"; sourceTree = "<group>"; };
+		F51551DC207F216800CC7453 /* myTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = myTableCell.h; sourceTree = "<group>"; };
+		F51551DD207F216800CC7453 /* myTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = myTableCell.m; sourceTree = "<group>"; };
+		F51551DF207F305F00CC7453 /* TopUpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopUpVC.h; sourceTree = "<group>"; };
+		F51551E0207F305F00CC7453 /* TopUpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopUpVC.m; sourceTree = "<group>"; };
+		F51551E2207F3F9700CC7453 /* CashVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CashVC.h; sourceTree = "<group>"; };
+		F51551E3207F3F9700CC7453 /* CashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CashVC.m; sourceTree = "<group>"; };
+		F51551E5207F483E00CC7453 /* CertificMessageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CertificMessageVC.h; sourceTree = "<group>"; };
+		F51551E6207F483E00CC7453 /* CertificMessageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CertificMessageVC.m; sourceTree = "<group>"; };
+		F51551E8207F4AAF00CC7453 /* CerTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CerTableCell.h; sourceTree = "<group>"; };
+		F51551E9207F4AAF00CC7453 /* CerTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CerTableCell.m; sourceTree = "<group>"; };
 		F519CE942069DFC9004E4250 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
 		F519CE952069DFC9004E4250 /* UIView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Size.h"; sourceTree = "<group>"; };
 		F519CE962069DFC9004E4250 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
@@ -261,6 +276,17 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		F51551DB207F214100CC7453 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F51551DC207F216800CC7453 /* myTableCell.h */,
+				F51551DD207F216800CC7453 /* myTableCell.m */,
+				F51551E8207F4AAF00CC7453 /* CerTableCell.h */,
+				F51551E9207F4AAF00CC7453 /* CerTableCell.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		F519CE932069DF66004E4250 /* TabbarCustom */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +324,7 @@
 		F519CEAB2069E116004E4250 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				F51551DB207F214100CC7453 /* view */,
 				F519CEB62069E520004E4250 /* MyController */,
 			);
 			path = My;
@@ -333,6 +360,12 @@
 			children = (
 				F519CEB82069E541004E4250 /* MyVC.h */,
 				F519CEB72069E541004E4250 /* MyVC.m */,
+				F51551DF207F305F00CC7453 /* TopUpVC.h */,
+				F51551E0207F305F00CC7453 /* TopUpVC.m */,
+				F51551E2207F3F9700CC7453 /* CashVC.h */,
+				F51551E3207F3F9700CC7453 /* CashVC.m */,
+				F51551E5207F483E00CC7453 /* CertificMessageVC.h */,
+				F51551E6207F483E00CC7453 /* CertificMessageVC.m */,
 			);
 			path = MyController;
 			sourceTree = "<group>";
@@ -657,6 +690,7 @@
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
 				183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */,
 				F519CEA62069E08F004E4250 /* CDTabbarVC.m in Sources */,
+				F51551E7207F483E00CC7453 /* CertificMessageVC.m in Sources */,
 				F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */,
 				F58A1F2A2071BAC8009D2EB5 /* ChooseCollectionCell.m in Sources */,
 				F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */,
@@ -664,12 +698,14 @@
 				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
 				183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */,
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
+				F51551DE207F216800CC7453 /* myTableCell.m in Sources */,
 				F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */,
 				F519CEB12069E33A004E4250 /* LoginVC.m in Sources */,
 				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
 				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
 				F519CEA42069E08F004E4250 /* CDNavigationVC.m in Sources */,
 				183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */,
+				F51551EA207F4AAF00CC7453 /* CerTableCell.m in Sources */,
 				F519CE9A2069DFCA004E4250 /* NSString+Size.m in Sources */,
 				F565ECDE205F3EE400F6ED18 /* ViewController.m in Sources */,
 				F519CE9C2069DFCA004E4250 /* UIView+Size.m in Sources */,
@@ -684,6 +720,8 @@
 				183A8907206C85BF007ED767 /* YXButton.m in Sources */,
 				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
+				F51551E1207F305F00CC7453 /* TopUpVC.m in Sources */,
+				F51551E4207F3F9700CC7453 /* CashVC.m in Sources */,
 				F5FDC8B3206E0B9700B8DC49 /* CellHeightModel.m in Sources */,
 				183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
