@@ -45,7 +45,6 @@
     _renewPwdTF=[self setTFWithFrame:CGRectMake(30, 130+50*2, WIDTH-60, 30) placeholder:@"请确认登录密码"];
     [self.view addSubview:_renewPwdTF];
     
-    
     UIButton *button=[UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame=CGRectMake(30, 130+50*4, WIDTH-60, 40);
     button.layer.borderColor=[UIColor lightGrayColor].CGColor;
