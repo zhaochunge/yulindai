@@ -13,7 +13,6 @@
 		183A4AF7208448C20015A66A /* ResetPayPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A4AF6208448C20015A66A /* ResetPayPWDViewController.m */; };
 		183A8907206C85BF007ED767 /* YXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8905206C85BE007ED767 /* YXButton.m */; };
 		183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8909206C8CE0007ED767 /* AboutMeViewController.m */; };
-		183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890C206C9088007ED767 /* AboutManageViewController.m */; };
 		183A8910206C9119007ED767 /* SafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890F206C9119007ED767 /* SafeViewController.m */; };
 		183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8912206CB466007ED767 /* SafeguardViewController.m */; };
 		183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8915206CB6D9007ED767 /* NewsViewController.m */; };
@@ -59,6 +58,7 @@
 		F53C716D2084680700C65BC0 /* BorrowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C716C2084680700C65BC0 /* BorrowVC.m */; };
 		F53C717020846DB500C65BC0 /* LineBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C716F20846DB500C65BC0 /* LineBtn.m */; };
 		F5401029207DD2E400E113EA /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5401028207DD2E400E113EA /* BaseVC.m */; };
+		F54695DC20857FE90057DB50 /* AboutManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890C206C9088007ED767 /* AboutManageViewController.m */; };
 		F547D4B0208035D800B3058C /* ShiMingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4AF208035D800B3058C /* ShiMingVC.m */; };
 		F547D4B32080510500B3058C /* cerTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4B22080510500B3058C /* cerTools.m */; };
 		F547D4B920805BBB00B3058C /* LTView.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4B820805BBB00B3058C /* LTView.m */; };
@@ -836,6 +836,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54695DC20857FE90057DB50 /* AboutManageViewController.m in Sources */,
 				F519CEBC2069E5D3004E4250 /* ZhuCeViewController.m in Sources */,
 				F519CEA52069E08F004E4250 /* CDTabBar.m in Sources */,
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
@@ -883,11 +884,9 @@
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
 				183A8907206C85BF007ED767 /* YXButton.m in Sources */,
 				F53C717020846DB500C65BC0 /* LineBtn.m in Sources */,
-				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
 				F547D4B32080510500B3058C /* cerTools.m in Sources */,
 				18B90EA8208047290095332D /* AccountSafeViewController.m in Sources */,
 				18B90E9E208035770095332D /* SettingViewController.m in Sources */,
-				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
 				18B90EAF20809DD00095332D /* ResetPWDViewController.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				F53C71522084311900C65BC0 /* ElecCerVC.m in Sources */,
