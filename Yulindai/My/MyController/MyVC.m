@@ -13,6 +13,8 @@
 #import "CertificMessageVC.h"
 #import "InvestManageVC.h"
 #import "BorrowVC.h"
+#import "SettingViewController.h"
+
 
 @interface MyVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *myTab;
@@ -178,6 +180,9 @@
             BorrowVC *vc = [BorrowVC new];
             [self.navigationController pushViewController:vc animated:YES]; 
         }
+    }else{
+        SettingViewController *setVC=[SettingViewController new];
+        [self.navigationController pushViewController:setVC animated:YES];
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
