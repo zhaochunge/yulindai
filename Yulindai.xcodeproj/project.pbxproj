@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183A4AEE2084311B0015A66A /* EmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A4AED2084311B0015A66A /* EmailViewController.m */; };
+		183A4AF120843B380015A66A /* ResetPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A4AF020843B380015A66A /* ResetPhoneViewController.m */; };
+		183A4AF4208442130015A66A /* SetPayPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A4AF3208442130015A66A /* SetPayPWDViewController.m */; };
+		183A4AF7208448C20015A66A /* ResetPayPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A4AF6208448C20015A66A /* ResetPayPWDViewController.m */; };
 		183A8907206C85BF007ED767 /* YXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8905206C85BE007ED767 /* YXButton.m */; };
 		183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8909206C8CE0007ED767 /* AboutMeViewController.m */; };
 		183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A890C206C9088007ED767 /* AboutManageViewController.m */; };
@@ -16,6 +20,11 @@
 		183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A8918206CCB2E007ED767 /* NewsDetailViewController.m */; };
 		185DDA7D206DC8CD009F07DD /* ImmediateInvestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185DDA7C206DC8CD009F07DD /* ImmediateInvestViewController.m */; };
 		1862CF85205F649A002EE70C /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862CF83205F649A002EE70C /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18B90E9E208035770095332D /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B90E9D208035770095332D /* SettingViewController.m */; };
+		18B90EA52080459D0095332D /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B90EA42080459D0095332D /* AboutViewController.m */; };
+		18B90EA8208047290095332D /* AccountSafeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B90EA7208047290095332D /* AccountSafeViewController.m */; };
+		18B90EAC208078990095332D /* PersonalDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B90EAB208078990095332D /* PersonalDataViewController.m */; };
+		18B90EAF20809DD00095332D /* ResetPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B90EAE20809DD00095332D /* ResetPWDViewController.m */; };
 		9DF56D30F94ACAC61B20572F /* libPods-Yulindai.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */; };
 		F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665CF205F65D800B3B3BB /* ForgetPwdViewController.m */; };
 		F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F50665D1205F65D800B3B3BB /* ReviewPwdViewController.m */; };
@@ -79,6 +88,14 @@
 
 /* Begin PBXFileReference section */
 		075FD1EBA0723293B20854D4 /* Pods-Yulindai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.release.xcconfig"; sourceTree = "<group>"; };
+		183A4AEC2084311B0015A66A /* EmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmailViewController.h; sourceTree = "<group>"; };
+		183A4AED2084311B0015A66A /* EmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmailViewController.m; sourceTree = "<group>"; };
+		183A4AEF20843B380015A66A /* ResetPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPhoneViewController.h; sourceTree = "<group>"; };
+		183A4AF020843B380015A66A /* ResetPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPhoneViewController.m; sourceTree = "<group>"; };
+		183A4AF2208442130015A66A /* SetPayPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPayPWDViewController.h; sourceTree = "<group>"; };
+		183A4AF3208442130015A66A /* SetPayPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPayPWDViewController.m; sourceTree = "<group>"; };
+		183A4AF5208448C20015A66A /* ResetPayPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPayPWDViewController.h; sourceTree = "<group>"; };
+		183A4AF6208448C20015A66A /* ResetPayPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPayPWDViewController.m; sourceTree = "<group>"; };
 		183A8905206C85BE007ED767 /* YXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXButton.m; sourceTree = "<group>"; };
 		183A8906206C85BE007ED767 /* YXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXButton.h; sourceTree = "<group>"; };
 		183A8908206C8CE0007ED767 /* AboutMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
@@ -98,6 +115,16 @@
 		1862CF82205F649A002EE70C /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
 		1862CF83205F649A002EE70C /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
 		1862CF84205F649A002EE70C /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		18B90E9C208035770095332D /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		18B90E9D208035770095332D /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		18B90EA32080459D0095332D /* AboutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		18B90EA42080459D0095332D /* AboutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		18B90EA6208047290095332D /* AccountSafeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountSafeViewController.h; sourceTree = "<group>"; };
+		18B90EA7208047290095332D /* AccountSafeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountSafeViewController.m; sourceTree = "<group>"; };
+		18B90EAA208078990095332D /* PersonalDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalDataViewController.h; sourceTree = "<group>"; };
+		18B90EAB208078990095332D /* PersonalDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalDataViewController.m; sourceTree = "<group>"; };
+		18B90EAD20809DD00095332D /* ResetPWDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPWDViewController.h; sourceTree = "<group>"; };
+		18B90EAE20809DD00095332D /* ResetPWDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPWDViewController.m; sourceTree = "<group>"; };
 		54F6A8735AD424CF016152E8 /* libPods-Yulindai.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yulindai.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C76067AEE0656EA6B8E214 /* Pods-Yulindai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yulindai.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yulindai/Pods-Yulindai.debug.xcconfig"; sourceTree = "<group>"; };
 		F50665CE205F65D800B3B3BB /* ReviewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewPwdViewController.h; sourceTree = "<group>"; };
@@ -219,6 +246,39 @@
 				1862CF84205F649A002EE70C /* GTMDefines.h */,
 			);
 			path = Base64;
+			sourceTree = "<group>";
+		};
+		18B90E9F208042200095332D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				18B90EA9208078380095332D /* 个人资料 */,
+				18B90E9C208035770095332D /* SettingViewController.h */,
+				18B90E9D208035770095332D /* SettingViewController.m */,
+				18B90EA6208047290095332D /* AccountSafeViewController.h */,
+				18B90EA7208047290095332D /* AccountSafeViewController.m */,
+				18B90EA32080459D0095332D /* AboutViewController.h */,
+				18B90EA42080459D0095332D /* AboutViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		18B90EA9208078380095332D /* 个人资料 */ = {
+			isa = PBXGroup;
+			children = (
+				18B90EAA208078990095332D /* PersonalDataViewController.h */,
+				18B90EAB208078990095332D /* PersonalDataViewController.m */,
+				18B90EAD20809DD00095332D /* ResetPWDViewController.h */,
+				18B90EAE20809DD00095332D /* ResetPWDViewController.m */,
+				183A4AEC2084311B0015A66A /* EmailViewController.h */,
+				183A4AED2084311B0015A66A /* EmailViewController.m */,
+				183A4AEF20843B380015A66A /* ResetPhoneViewController.h */,
+				183A4AF020843B380015A66A /* ResetPhoneViewController.m */,
+				183A4AF2208442130015A66A /* SetPayPWDViewController.h */,
+				183A4AF3208442130015A66A /* SetPayPWDViewController.m */,
+				183A4AF5208448C20015A66A /* ResetPayPWDViewController.h */,
+				183A4AF6208448C20015A66A /* ResetPayPWDViewController.m */,
+			);
+			path = "个人资料";
 			sourceTree = "<group>";
 		};
 		53A663AC652375F8FAF96D62 /* Pods */ = {
@@ -366,6 +426,7 @@
 				F51551E3207F3F9700CC7453 /* CashVC.m */,
 				F51551E5207F483E00CC7453 /* CertificMessageVC.h */,
 				F51551E6207F483E00CC7453 /* CertificMessageVC.m */,
+				18B90E9F208042200095332D /* Setting */,
 			);
 			path = MyController;
 			sourceTree = "<group>";
@@ -700,6 +761,7 @@
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
 				F51551DE207F216800CC7453 /* myTableCell.m in Sources */,
 				F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */,
+				183A4AEE2084311B0015A66A /* EmailViewController.m in Sources */,
 				F519CEB12069E33A004E4250 /* LoginVC.m in Sources */,
 				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
 				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
@@ -718,7 +780,10 @@
 				F54AB489206381370019391D /* NetTools.m in Sources */,
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
 				183A8907206C85BF007ED767 /* YXButton.m in Sources */,
+				18B90EA8208047290095332D /* AccountSafeViewController.m in Sources */,
+				18B90E9E208035770095332D /* SettingViewController.m in Sources */,
 				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
+				18B90EAF20809DD00095332D /* ResetPWDViewController.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
 				F51551E1207F305F00CC7453 /* TopUpVC.m in Sources */,
 				F51551E4207F3F9700CC7453 /* CashVC.m in Sources */,
@@ -726,8 +791,13 @@
 				183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
+				18B90EA52080459D0095332D /* AboutViewController.m in Sources */,
 				185DDA7D206DC8CD009F07DD /* ImmediateInvestViewController.m in Sources */,
+				183A4AF7208448C20015A66A /* ResetPayPWDViewController.m in Sources */,
+				18B90EAC208078990095332D /* PersonalDataViewController.m in Sources */,
 				F5FDC8AC206DC09500B8DC49 /* CustomAlertView.m in Sources */,
+				183A4AF120843B380015A66A /* ResetPhoneViewController.m in Sources */,
+				183A4AF4208442130015A66A /* SetPayPWDViewController.m in Sources */,
 				F5F7F4F8206C7B0E00DB6F2A /* InvestVC.m in Sources */,
 				F5FDC8AF206DDC8B00B8DC49 /* ChooseTabCell.m in Sources */,
 			);

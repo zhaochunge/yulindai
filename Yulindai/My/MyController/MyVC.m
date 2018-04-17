@@ -11,6 +11,7 @@
 #import "TopUpVC.h"
 #import "CashVC.h"
 #import "CertificMessageVC.h"
+#import "SettingViewController.h"
 
 @interface MyVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *myTab;
@@ -151,6 +152,9 @@
             CertificMessageVC *vc = [CertificMessageVC new];
             [self.navigationController pushViewController:vc animated:YES];
         }
+    }else{
+        SettingViewController *setVC=[SettingViewController new];
+        [self.navigationController pushViewController:setVC animated:YES];
     }
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
