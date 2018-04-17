@@ -11,7 +11,10 @@
 #import "TopUpVC.h"
 #import "CashVC.h"
 #import "CertificMessageVC.h"
+#import "InvestManageVC.h"
+#import "BorrowVC.h"
 #import "SettingViewController.h"
+
 
 @interface MyVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *myTab;
@@ -29,17 +32,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = NAVCOLOR;
+
+    [self setStatusBarBackgroundColor:NAVCOLOR];
     self.titleArr = @[@[@"认证信息",@"投资管理",@"借款管理"],@[@"设置"]];
     self.picArr = @[@[@"认证-ICON",@"投资理财-ICON",@"借款-ICON (2)"],@[@"设置-ICON"]];
     [self createTable];
     [self headview];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+
+}
+
+//设置状态栏颜色
+- (void)setStatusBarBackgroundColor:(UIColor *)color {
+    
+    UIView *statusBar = [[[UIApplication sharedApplication] valueForKey:@"statusBarWindow"] valueForKey:@"statusBar"];
+    if ([statusBar respondsToSelector:@selector(setBackgroundColor:)]) {
+        statusBar.backgroundColor = color;
+    }
+}
+
 -(void)createTable{
-    self.myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, SafeAreaTopHeight-44, WIDTH, HEIGHT-SafeAreaTopHeight+44) style:(UITableViewStylePlain)];
+    self.myTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT-SafeAreaTopHeight-SafeAreaBottomHeight) style:(UITableViewStylePlain)];
     self.myTab.delegate = self;
     _myTab.dataSource = self;
+    _myTab.bounces = NO;
     [self.view addSubview:_myTab];
     [_myTab registerClass:[myTableCell class] forCellReuseIdentifier:@"MyReuse"];
     UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
@@ -151,6 +171,14 @@
             //认证信息
             CertificMessageVC *vc = [CertificMessageVC new];
             [self.navigationController pushViewController:vc animated:YES];
+        }if (indexPath.row == 1) {
+            //投资管理
+            InvestManageVC *vc = [InvestManageVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }if(indexPath.row == 2){
+            //借款管理
+            BorrowVC *vc = [BorrowVC new];
+            [self.navigationController pushViewController:vc animated:YES]; 
         }
     }else{
         SettingViewController *setVC=[SettingViewController new];
@@ -177,10 +205,7 @@
     view.backgroundColor = LINECOLOR;
     return view;
 }
--(void)viewWillAppear:(BOOL)animated{
-    
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
+
 -(void)viewWillDisappear:(BOOL)animated{
      [self.navigationController setNavigationBarHidden:NO animated:YES];
 }

@@ -190,7 +190,7 @@
     [self.bacView removeFromSuperview];
 }
 -(void)createTable{
-    self.tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, SafeAreaTopHeight, WIDTH, HEIGHT-SafeAreaTopHeight-SafeAreaBottomHeight) style:(UITableViewStylePlain)];
+    self.tableList = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT-SafeAreaTopHeight-SafeAreaBottomHeight) style:(UITableViewStylePlain)];
     self.tableList.delegate = self;
     self.tableList.dataSource = self;
     _tableList.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -288,7 +288,7 @@
         _sprBtn.frame = CGRectMake(WIDTH-100, 10, 30, 30);
         _sprBtn.tag = 900+section;
         [view addSubview:_sprBtn];
-        [_sprBtn setImage:[UIImage imageNamed:@"更多_ICON"] forState:(UIControlStateNormal)];
+        [_sprBtn setImage:[UIImage imageNamed:@"三角"] forState:(UIControlStateNormal)];
         [_sprBtn addTarget:self action:@selector(sprAction:) forControlEvents:(UIControlEventTouchUpInside)];
         
         

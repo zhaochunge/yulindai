@@ -47,7 +47,25 @@
 		F519CEB52069E51B004E4250 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEB32069E51B004E4250 /* HomeVC.m */; };
 		F519CEB92069E541004E4250 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEB72069E541004E4250 /* MyVC.m */; };
 		F519CEBC2069E5D3004E4250 /* ZhuCeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F519CEBB2069E5D3004E4250 /* ZhuCeViewController.m */; };
+		F53C71522084311900C65BC0 /* ElecCerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C71512084311900C65BC0 /* ElecCerVC.m */; };
+		F53C71552084326E00C65BC0 /* HouseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C71542084326E00C65BC0 /* HouseVC.m */; };
+		F53C7158208432A900C65BC0 /* CarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C7157208432A900C65BC0 /* CarVC.m */; };
+		F53C715B208432D300C65BC0 /* AcadmicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C715A208432D300C65BC0 /* AcadmicVC.m */; };
+		F53C715E2084332400C65BC0 /* VideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C715D2084332400C65BC0 /* VideoVC.m */; };
+		F53C71612084333300C65BC0 /* PhoneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C71602084333300C65BC0 /* PhoneVC.m */; };
+		F53C71642084336800C65BC0 /* PlaceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C71632084336800C65BC0 /* PlaceVC.m */; };
+		F53C71672084338C00C65BC0 /* MarryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C71662084338C00C65BC0 /* MarryVC.m */; };
+		F53C716A208467F400C65BC0 /* InvestManageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C7169208467F400C65BC0 /* InvestManageVC.m */; };
+		F53C716D2084680700C65BC0 /* BorrowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C716C2084680700C65BC0 /* BorrowVC.m */; };
+		F53C717020846DB500C65BC0 /* LineBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = F53C716F20846DB500C65BC0 /* LineBtn.m */; };
 		F5401029207DD2E400E113EA /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F5401028207DD2E400E113EA /* BaseVC.m */; };
+		F547D4B0208035D800B3058C /* ShiMingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4AF208035D800B3058C /* ShiMingVC.m */; };
+		F547D4B32080510500B3058C /* cerTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4B22080510500B3058C /* cerTools.m */; };
+		F547D4B920805BBB00B3058C /* LTView.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4B820805BBB00B3058C /* LTView.m */; };
+		F547D4BC20807CFE00B3058C /* LLBView.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4BB20807CFE00B3058C /* LLBView.m */; };
+		F547D4BF20809BB600B3058C /* WorkCerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4BE20809BB600B3058C /* WorkCerVC.m */; };
+		F547D4C22080A41F00B3058C /* CreditReportVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4C12080A41F00B3058C /* CreditReportVC.m */; };
+		F547D4C52080A6B600B3058C /* IncomeCerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F547D4C42080A6B600B3058C /* IncomeCerVC.m */; };
 		F54AB486206353E80019391D /* Base64Verb.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB485206353E80019391D /* Base64Verb.m */; };
 		F54AB489206381370019391D /* NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = F54AB488206381370019391D /* NetTools.m */; };
 		F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F565ECDA205F3EE400F6ED18 /* AppDelegate.m */; };
@@ -169,8 +187,44 @@
 		F519CEB82069E541004E4250 /* MyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVC.h; sourceTree = "<group>"; };
 		F519CEBA2069E5D3004E4250 /* ZhuCeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhuCeViewController.h; sourceTree = "<group>"; };
 		F519CEBB2069E5D3004E4250 /* ZhuCeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhuCeViewController.m; sourceTree = "<group>"; };
+		F53C71502084311900C65BC0 /* ElecCerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElecCerVC.h; sourceTree = "<group>"; };
+		F53C71512084311900C65BC0 /* ElecCerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElecCerVC.m; sourceTree = "<group>"; };
+		F53C71532084326E00C65BC0 /* HouseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HouseVC.h; sourceTree = "<group>"; };
+		F53C71542084326E00C65BC0 /* HouseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HouseVC.m; sourceTree = "<group>"; };
+		F53C7156208432A900C65BC0 /* CarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CarVC.h; sourceTree = "<group>"; };
+		F53C7157208432A900C65BC0 /* CarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarVC.m; sourceTree = "<group>"; };
+		F53C7159208432D300C65BC0 /* AcadmicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AcadmicVC.h; sourceTree = "<group>"; };
+		F53C715A208432D300C65BC0 /* AcadmicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcadmicVC.m; sourceTree = "<group>"; };
+		F53C715C2084332400C65BC0 /* VideoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoVC.h; sourceTree = "<group>"; };
+		F53C715D2084332400C65BC0 /* VideoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoVC.m; sourceTree = "<group>"; };
+		F53C715F2084333300C65BC0 /* PhoneVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneVC.h; sourceTree = "<group>"; };
+		F53C71602084333300C65BC0 /* PhoneVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneVC.m; sourceTree = "<group>"; };
+		F53C71622084336800C65BC0 /* PlaceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceVC.h; sourceTree = "<group>"; };
+		F53C71632084336800C65BC0 /* PlaceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceVC.m; sourceTree = "<group>"; };
+		F53C71652084338C00C65BC0 /* MarryVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarryVC.h; sourceTree = "<group>"; };
+		F53C71662084338C00C65BC0 /* MarryVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarryVC.m; sourceTree = "<group>"; };
+		F53C7168208467F400C65BC0 /* InvestManageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvestManageVC.h; sourceTree = "<group>"; };
+		F53C7169208467F400C65BC0 /* InvestManageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvestManageVC.m; sourceTree = "<group>"; };
+		F53C716B2084680700C65BC0 /* BorrowVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorrowVC.h; sourceTree = "<group>"; };
+		F53C716C2084680700C65BC0 /* BorrowVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorrowVC.m; sourceTree = "<group>"; };
+		F53C716E20846DB500C65BC0 /* LineBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LineBtn.h; sourceTree = "<group>"; };
+		F53C716F20846DB500C65BC0 /* LineBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LineBtn.m; sourceTree = "<group>"; };
 		F5401027207DD2E400E113EA /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		F5401028207DD2E400E113EA /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		F547D4AE208035D800B3058C /* ShiMingVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShiMingVC.h; sourceTree = "<group>"; };
+		F547D4AF208035D800B3058C /* ShiMingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiMingVC.m; sourceTree = "<group>"; };
+		F547D4B12080510500B3058C /* cerTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cerTools.h; sourceTree = "<group>"; };
+		F547D4B22080510500B3058C /* cerTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cerTools.m; sourceTree = "<group>"; };
+		F547D4B720805BBB00B3058C /* LTView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTView.h; sourceTree = "<group>"; };
+		F547D4B820805BBB00B3058C /* LTView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTView.m; sourceTree = "<group>"; };
+		F547D4BA20807CFE00B3058C /* LLBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLBView.h; sourceTree = "<group>"; };
+		F547D4BB20807CFE00B3058C /* LLBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLBView.m; sourceTree = "<group>"; };
+		F547D4BD20809BB600B3058C /* WorkCerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkCerVC.h; sourceTree = "<group>"; };
+		F547D4BE20809BB600B3058C /* WorkCerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkCerVC.m; sourceTree = "<group>"; };
+		F547D4C02080A41F00B3058C /* CreditReportVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreditReportVC.h; sourceTree = "<group>"; };
+		F547D4C12080A41F00B3058C /* CreditReportVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreditReportVC.m; sourceTree = "<group>"; };
+		F547D4C32080A6B600B3058C /* IncomeCerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomeCerVC.h; sourceTree = "<group>"; };
+		F547D4C42080A6B600B3058C /* IncomeCerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IncomeCerVC.m; sourceTree = "<group>"; };
 		F54AB484206353E80019391D /* Base64Verb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Verb.h; sourceTree = "<group>"; };
 		F54AB485206353E80019391D /* Base64Verb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Base64Verb.m; sourceTree = "<group>"; };
 		F54AB487206381370019391D /* NetTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetTools.h; sourceTree = "<group>"; };
@@ -332,6 +386,10 @@
 				F54AB488206381370019391D /* NetTools.m */,
 				F5FDC8AA206DC09500B8DC49 /* CustomAlertView.h */,
 				F5FDC8AB206DC09500B8DC49 /* CustomAlertView.m */,
+				F547D4B12080510500B3058C /* cerTools.h */,
+				F547D4B22080510500B3058C /* cerTools.m */,
+				F53C716E20846DB500C65BC0 /* LineBtn.h */,
+				F53C716F20846DB500C65BC0 /* LineBtn.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -343,6 +401,10 @@
 				F51551DD207F216800CC7453 /* myTableCell.m */,
 				F51551E8207F4AAF00CC7453 /* CerTableCell.h */,
 				F51551E9207F4AAF00CC7453 /* CerTableCell.m */,
+				F547D4B720805BBB00B3058C /* LTView.h */,
+				F547D4B820805BBB00B3058C /* LTView.m */,
+				F547D4BA20807CFE00B3058C /* LLBView.h */,
+				F547D4BB20807CFE00B3058C /* LLBView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -426,6 +488,34 @@
 				F51551E3207F3F9700CC7453 /* CashVC.m */,
 				F51551E5207F483E00CC7453 /* CertificMessageVC.h */,
 				F51551E6207F483E00CC7453 /* CertificMessageVC.m */,
+				F547D4AE208035D800B3058C /* ShiMingVC.h */,
+				F547D4AF208035D800B3058C /* ShiMingVC.m */,
+				F547D4BD20809BB600B3058C /* WorkCerVC.h */,
+				F547D4BE20809BB600B3058C /* WorkCerVC.m */,
+				F547D4C02080A41F00B3058C /* CreditReportVC.h */,
+				F547D4C12080A41F00B3058C /* CreditReportVC.m */,
+				F547D4C32080A6B600B3058C /* IncomeCerVC.h */,
+				F547D4C42080A6B600B3058C /* IncomeCerVC.m */,
+				F53C71502084311900C65BC0 /* ElecCerVC.h */,
+				F53C71512084311900C65BC0 /* ElecCerVC.m */,
+				F53C71532084326E00C65BC0 /* HouseVC.h */,
+				F53C71542084326E00C65BC0 /* HouseVC.m */,
+				F53C7156208432A900C65BC0 /* CarVC.h */,
+				F53C7157208432A900C65BC0 /* CarVC.m */,
+				F53C7159208432D300C65BC0 /* AcadmicVC.h */,
+				F53C715A208432D300C65BC0 /* AcadmicVC.m */,
+				F53C715C2084332400C65BC0 /* VideoVC.h */,
+				F53C715D2084332400C65BC0 /* VideoVC.m */,
+				F53C715F2084333300C65BC0 /* PhoneVC.h */,
+				F53C71602084333300C65BC0 /* PhoneVC.m */,
+				F53C71622084336800C65BC0 /* PlaceVC.h */,
+				F53C71632084336800C65BC0 /* PlaceVC.m */,
+				F53C71652084338C00C65BC0 /* MarryVC.h */,
+				F53C71662084338C00C65BC0 /* MarryVC.m */,
+				F53C7168208467F400C65BC0 /* InvestManageVC.h */,
+				F53C7169208467F400C65BC0 /* InvestManageVC.m */,
+				F53C716B2084680700C65BC0 /* BorrowVC.h */,
+				F53C716C2084680700C65BC0 /* BorrowVC.m */,
 				18B90E9F208042200095332D /* Setting */,
 			);
 			path = MyController;
@@ -750,22 +840,33 @@
 				F519CEA52069E08F004E4250 /* CDTabBar.m in Sources */,
 				F50665D3205F65D800B3B3BB /* ReviewPwdViewController.m in Sources */,
 				183A8913206CB466007ED767 /* SafeguardViewController.m in Sources */,
+				F547D4BC20807CFE00B3058C /* LLBView.m in Sources */,
+				F53C715E2084332400C65BC0 /* VideoVC.m in Sources */,
 				F519CEA62069E08F004E4250 /* CDTabbarVC.m in Sources */,
 				F51551E7207F483E00CC7453 /* CertificMessageVC.m in Sources */,
 				F5F7F4FE206CC1A200DB6F2A /* EntrustVC.m in Sources */,
+				F53C716A208467F400C65BC0 /* InvestManageVC.m in Sources */,
+				F53C71642084336800C65BC0 /* PlaceVC.m in Sources */,
 				F58A1F2A2071BAC8009D2EB5 /* ChooseCollectionCell.m in Sources */,
 				F519CE9B2069DFCA004E4250 /* UIButton+Edge.m in Sources */,
 				183A8910206C9119007ED767 /* SafeViewController.m in Sources */,
+				F547D4C22080A41F00B3058C /* CreditReportVC.m in Sources */,
 				F50665DE205F8D9600B3B3BB /* MyBaseViewController.m in Sources */,
 				183A8919206CCB2E007ED767 /* NewsDetailViewController.m in Sources */,
+				F547D4C52080A6B600B3058C /* IncomeCerVC.m in Sources */,
 				F5F7F4F3206C6D0A00DB6F2A /* LoanVC.m in Sources */,
 				F51551DE207F216800CC7453 /* myTableCell.m in Sources */,
+				F53C71552084326E00C65BC0 /* HouseVC.m in Sources */,
+				F547D4B920805BBB00B3058C /* LTView.m in Sources */,
 				F5F7F501206CCC4E00DB6F2A /* PersonalOpenVC.m in Sources */,
 				183A4AEE2084311B0015A66A /* EmailViewController.m in Sources */,
 				F519CEB12069E33A004E4250 /* LoginVC.m in Sources */,
+				F547D4BF20809BB600B3058C /* WorkCerVC.m in Sources */,
+				F53C7158208432A900C65BC0 /* CarVC.m in Sources */,
 				F50665DA205F880F00B3B3BB /* RegisterSuccessViewController.m in Sources */,
 				F50665E4205F94B200B3B3BB /* ReviewPwdSuccessVC.m in Sources */,
 				F519CEA42069E08F004E4250 /* CDNavigationVC.m in Sources */,
+				F53C71672084338C00C65BC0 /* MarryVC.m in Sources */,
 				183A890A206C8CE0007ED767 /* AboutMeViewController.m in Sources */,
 				F51551EA207F4AAF00CC7453 /* CerTableCell.m in Sources */,
 				F519CE9A2069DFCA004E4250 /* NSString+Size.m in Sources */,
@@ -773,6 +874,7 @@
 				F519CE9C2069DFCA004E4250 /* UIView+Size.m in Sources */,
 				F50665E8205F9E5100B3B3BB /* UIColor+ColorChange.m in Sources */,
 				F50665D2205F65D800B3B3BB /* ForgetPwdViewController.m in Sources */,
+				F547D4B0208035D800B3058C /* ShiMingVC.m in Sources */,
 				F5401029207DD2E400E113EA /* BaseVC.m in Sources */,
 				F519CEB92069E541004E4250 /* MyVC.m in Sources */,
 				F565ECE9205F3EE400F6ED18 /* main.m in Sources */,
@@ -780,17 +882,24 @@
 				F54AB489206381370019391D /* NetTools.m in Sources */,
 				F519CEB52069E51B004E4250 /* HomeVC.m in Sources */,
 				183A8907206C85BF007ED767 /* YXButton.m in Sources */,
+				F53C717020846DB500C65BC0 /* LineBtn.m in Sources */,
+				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
+				F547D4B32080510500B3058C /* cerTools.m in Sources */,
 				18B90EA8208047290095332D /* AccountSafeViewController.m in Sources */,
 				18B90E9E208035770095332D /* SettingViewController.m in Sources */,
 				183A890D206C9088007ED767 /* AboutManageViewController.m in Sources */,
 				18B90EAF20809DD00095332D /* ResetPWDViewController.m in Sources */,
 				F565ECDB205F3EE400F6ED18 /* AppDelegate.m in Sources */,
+				F53C71522084311900C65BC0 /* ElecCerVC.m in Sources */,
+				F53C716D2084680700C65BC0 /* BorrowVC.m in Sources */,
 				F51551E1207F305F00CC7453 /* TopUpVC.m in Sources */,
 				F51551E4207F3F9700CC7453 /* CashVC.m in Sources */,
 				F5FDC8B3206E0B9700B8DC49 /* CellHeightModel.m in Sources */,
 				183A8916206CB6D9007ED767 /* NewsViewController.m in Sources */,
+				F53C715B208432D300C65BC0 /* AcadmicVC.m in Sources */,
 				1862CF85205F649A002EE70C /* GTMBase64.m in Sources */,
 				F54AB486206353E80019391D /* Base64Verb.m in Sources */,
+				F53C71612084333300C65BC0 /* PhoneVC.m in Sources */,
 				18B90EA52080459D0095332D /* AboutViewController.m in Sources */,
 				185DDA7D206DC8CD009F07DD /* ImmediateInvestViewController.m in Sources */,
 				183A4AF7208448C20015A66A /* ResetPayPWDViewController.m in Sources */,
