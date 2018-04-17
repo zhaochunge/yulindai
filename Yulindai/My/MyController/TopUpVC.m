@@ -25,24 +25,24 @@
     [self bottomLab];
 }
 -(void)bottomLab{
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, HEIGHT-130-SafeAreaBottomHeight, WIDTH, 30)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, HEIGHT-130-SafeAreaBottomHeight-SafeAreaTopHeight, WIDTH, 30)];
     title.text = @"温馨提示:";
     [self.view addSubview:title];
     UILabel *tips1 = [[UILabel alloc] initWithFrame:CGRectMake(20, title.bottom, WIDTH-40, 30)];
     tips1.textColor = [UIColor lightGrayColor];
-    tips1.font = [UIFont systemFontOfSize:15];
+    tips1.font = [UIFont systemFontOfSize:13];
     tips1.text = @"即时充值所产生的转账费用,有第三方平台收取,充值费用视平台而定";
     [self.view addSubview:tips1];
     UILabel *tips2 = [[UILabel alloc] initWithFrame:CGRectMake(20, tips1.bottom, WIDTH-40, 30)];
     tips2.textColor = [UIColor lightGrayColor];
     tips2.text = @"请您注意您的银行卡充值限制,以免造成不便.";
-    tips2.font = [UIFont systemFontOfSize:15];
+    tips2.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:tips2];
     UILabel *tips3 = [[UILabel alloc] initWithFrame:CGRectMake(20, tips2.bottom, WIDTH-40, 30)];
     tips3.textColor = [UIColor lightGrayColor];
     tips3.text = @"如果充值金额没有及时到账,请和客服联系.";
     [self.view addSubview:tips3];
-    tips3.font = [UIFont systemFontOfSize:15];
+    tips3.font = [UIFont systemFontOfSize:13];
 }
 -(void)rightItem{
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -56,7 +56,7 @@
     
 }
 -(void)createUI{
-    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(10, SafeAreaTopHeight+10, WIDTH-20, 260)];
+    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, WIDTH-20, 260)];
     whiteView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:whiteView];
     UILabel *bankLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 100, 30)];

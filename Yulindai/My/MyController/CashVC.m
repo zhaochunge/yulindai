@@ -24,7 +24,7 @@
     [self bottomLab];
 }
 -(void)createUI{
-    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(10, SafeAreaTopHeight+10, WIDTH-20, 280)];
+    UIView *whiteView = [[UIView alloc] initWithFrame:CGRectMake(10, 10, WIDTH-20, 280)];
     whiteView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:whiteView];
     UILabel *bankLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 200, 30)];
@@ -80,12 +80,12 @@
     
 }
 -(void)bottomLab{
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, HEIGHT-100-SafeAreaBottomHeight, WIDTH, 30)];
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(20, HEIGHT-100-SafeAreaBottomHeight-SafeAreaTopHeight, WIDTH, 30)];
     title.text = @"警告:";
     [self.view addSubview:title];
     UILabel *tips1 = [[UILabel alloc] initWithFrame:CGRectMake(20, title.bottom, WIDTH-40, 60)];
     tips1.textColor = [UIColor lightGrayColor];
-    tips1.font = [UIFont systemFontOfSize:15];
+    tips1.font = [UIFont systemFontOfSize:13];
     tips1.text = @"禁止信用卡套现,虚假交易等行为,一经确认,将终止该账户的使用权利.";
     tips1.numberOfLines = 0;
     [self.view addSubview:tips1];

@@ -8,6 +8,18 @@
 
 #import "CertificMessageVC.h"
 #import "CerTableCell.h"
+#import "ShiMingVC.h"
+#import "WorkCerVC.h"
+#import "CreditReportVC.h"
+#import "IncomeCerVC.h"
+#import "ElecCerVC.h"
+#import "HouseVC.h"
+#import "CarVC.h"
+#import "AcadmicVC.h"
+#import "VideoVC.h"
+#import "PhoneVC.h"
+#import "PlaceVC.h"
+#import "MarryVC.h"
 
 @interface CertificMessageVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *cerTab;
@@ -25,7 +37,7 @@
     self.titleArr =@[ @[@"实名认证"],@[@"工作认证",@"信用报告",@"收入认证",@"电子印章",@"房产认证",@"购车认证",@"学历认证",@"视频认证",@"手机认证",@"居住地认证",@"结婚认证"]];
 }
 -(void)setupUI{
-    self.cerTab = [[UITableView alloc] initWithFrame:CGRectMake(0, SafeAreaTopHeight, WIDTH, HEIGHT-SafeAreaTopHeight-SafeAreaBottomHeight) style:(UITableViewStylePlain)];
+    self.cerTab = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT-SafeAreaTopHeight-SafeAreaBottomHeight) style:(UITableViewStylePlain)];
     self.cerTab.delegate = self;
     self.cerTab.dataSource = self;
     [self.cerTab registerClass:[CerTableCell class] forCellReuseIdentifier:@"cerReuse"];
@@ -48,6 +60,63 @@
     cell.titleLab.text = [NSString stringWithFormat:@"%@",self.titleArr[indexPath.section][indexPath.row]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        //实名认证
+        ShiMingVC *vc = [ShiMingVC new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        if (indexPath.row == 0) {
+            //工作认证
+            WorkCerVC *vc = [WorkCerVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if(indexPath.row == 1){
+            //信用报告
+            CreditReportVC *vc = [CreditReportVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if(indexPath.row == 2){
+            //收入认证
+            IncomeCerVC *vc = [IncomeCerVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 3){
+            //电子印章
+            ElecCerVC *vc = [ElecCerVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 4){
+            //房产认证
+            HouseVC *vc = [HouseVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else if(indexPath.row == 5){
+            //购车认证
+            CarVC *vc = [CarVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if(indexPath.row == 6){
+            //学历认证
+            AcadmicVC *vc = [AcadmicVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 7){
+            //视频认证
+            VideoVC *vc = [VideoVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if(indexPath.row == 8){
+            //手机认证
+            PhoneVC *vc = [PhoneVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }else if(indexPath.row == 9){
+            //居住地认证
+            PlaceVC *vc = [PlaceVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else{//结婚认证
+            MarryVC *vc = [MarryVC new];
+            [self.navigationController pushViewController:vc animated:YES];
+            
+        }
+    }
+    
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *headSection = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 70)];
