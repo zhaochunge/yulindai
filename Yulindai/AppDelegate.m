@@ -24,11 +24,10 @@
     CDTabbarVC *vc = [CDTabbarVC new];
 //    LoginVC *vc =[LoginVC new];
 
+
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
-    
-//    all your dreams
-    
+        
     
     return YES;
 }
