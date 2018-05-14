@@ -14,7 +14,7 @@
 #import "InvestManageVC.h"
 #import "BorrowVC.h"
 #import "SettingViewController.h"
-
+#import "ShiMingVC.h"
 
 @interface MyVC ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *myTab;
@@ -169,7 +169,8 @@
     if (indexPath.section ==0) {
         if (indexPath.row == 0) {
             //认证信息
-            CertificMessageVC *vc = [CertificMessageVC new];
+//            CertificMessageVC *vc = [CertificMessageVC new];
+            ShiMingVC *vc = [ShiMingVC new];
             [self.navigationController pushViewController:vc animated:YES];
         }if (indexPath.row == 1) {
             //投资管理
@@ -189,14 +190,14 @@
     myTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyReuse" forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.titleLab.text = self.titleArr[indexPath.section][indexPath.row];
-    cell.img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.picArr[indexPath.section][indexPath.row]]];
+    cell.img.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.picArr[indexPath.section]                                                             [indexPath.row]]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
--(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{ 
     return 10;
 }
 -(UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

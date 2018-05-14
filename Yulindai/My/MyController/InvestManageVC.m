@@ -55,7 +55,7 @@
     return cell;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.dataArr.count;
 }
 -(void)createHeader{
     self.headerView= [UIView new];

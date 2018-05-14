@@ -75,7 +75,7 @@
     //说明
     top = top+180;
     NSDictionary *dict2 = @{NSFontAttributeName : [UIFont systemFontOfSize:13.0]};
-    NSString *discribStr2 = @"您上传的身份证扫描件需和您绑定的身份证一致,否则将无法通过认证.";
+    NSString *discribStr2 = @"1.您上传您本人身份证原件的照片.如果您持有二代身份证,请上传正反两面照片.如果您持有第一代身份证,仅需上传正面照.2.请您确认上传的资料是清晰地,未经修改的数码照片(不可以是扫描图片).每张图片的尺寸不大于1.5M.审核时间:3个工作日内.认证有效期:永久.";
     CGSize size2=[discribStr2 boundingRectWithSize:CGSizeMake(WIDTH-40, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dict2 context:nil].size;
     height =size2.height+36;
     [cerTools title:@"认证说明:" font:15 discrib:discribStr withFrame:CGRectMake(20, top, WIDTH-40, height) view:self.scrollView showLine:NO];
@@ -132,7 +132,8 @@
 }
 #pragma mark 提交审核
 -(void)action:(UIButton *)btn{
-    
+//    self.nameView.textField.text;
+//    self.numView.textField.text;
 }
 
 -(void)textFieldDidEndEditing:(UITextField *)textField{

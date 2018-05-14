@@ -21,12 +21,7 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-//    CDTabbarVC *vc = [CDTabbarVC new];
-//    LoginVC *vc =[LoginVC new];
-    
-
     CDTabbarVC *vc = [CDTabbarVC new];
-//    CDTabbarVC *vc = [CDTabbarVC new];
 //    LoginVC *vc =[LoginVC new];
 
     self.window.rootViewController = vc;
